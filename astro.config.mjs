@@ -27,24 +27,68 @@ export default defineConfig({
 
       sidebar: [
         {
-          label: 'Guides',
+          label: 'Foundation',
           items: [
-            { label: 'Example Guide', slug: 'guides/example' },
+            { label: 'Getting Started', slug: 'foundation/overview' },
+            { label: 'Who We Are', slug: 'foundation/who-we-are' },
+            { label: 'Mission & Values', slug: 'foundation/mission-values' },
           ],
         },
         {
-          label: 'Reference',
-          autogenerate: { directory: 'reference' },
-        },
-        {
-          label: 'Internal Communications',
-          autogenerate: { directory: 'internal-comms' },
-        },
-        {
-          label: 'Testing',
+          label: 'Strategy & Planning',
           items: [
-            { label: 'Accessibility Test', slug: 'accessibility-test' },
-            { label: 'Starlight Components', slug: 'starlight-component-test' },
+            { label: 'Strategy Framework', slug: 'strategy/framework' },
+            { label: 'Audience Analysis', slug: 'strategy/audience-analysis' },
+            { label: 'Message Development', slug: 'strategy/message-development' },
+            { label: 'Channel Planning', slug: 'strategy/channel-planning' },
+          ],
+        },
+        {
+          label: 'Brand Voice & Tone',
+          items: [
+            { label: 'Voice Guidelines', slug: 'voice-tone/guidelines' },
+            { label: 'Tone by Audience', slug: 'voice-tone/tone-adaptation' },
+            { label: 'Writing Style Guide', slug: 'voice-tone/writing-style' },
+            { label: 'Messaging Frameworks', slug: 'voice-tone/messaging-frameworks' },
+          ],
+        },
+        {
+          label: 'Employee Journey',
+          items: [
+            { label: 'Journey Overview', slug: 'employee-journey/overview' },
+            { label: 'Pre-Boarding', slug: 'employee-journey/pre-boarding' },
+            { label: 'Onboarding', slug: 'employee-journey/onboarding' },
+            { label: 'Career Development', slug: 'employee-journey/development' },
+            { label: 'Recognition & Milestones', slug: 'employee-journey/recognition' },
+            { label: 'Transitions & Changes', slug: 'employee-journey/transitions' },
+            { label: 'Offboarding', slug: 'employee-journey/offboarding' },
+          ],
+        },
+        {
+          label: 'Content & Channels',
+          items: [
+            { label: 'Email Communications', slug: 'channels/email' },
+            { label: 'Internal Newsletters', slug: 'channels/newsletters' },
+            { label: 'Town Halls & Meetings', slug: 'channels/meetings' },
+            { label: 'Digital Workplace', slug: 'channels/digital-workplace' },
+            { label: 'Crisis Communications', slug: 'channels/crisis' },
+          ],
+        },
+        {
+          label: 'Templates & Tools',
+          items: [
+            { label: 'Email Templates', slug: 'templates/email' },
+            { label: 'Announcement Templates', slug: 'templates/announcements' },
+            { label: 'Presentation Templates', slug: 'templates/presentations' },
+            { label: 'Planning Tools', slug: 'templates/planning-tools' },
+          ],
+        },
+        {
+          label: 'Measurement & Analytics',
+          items: [
+            { label: 'Success Metrics', slug: 'measurement/metrics' },
+            { label: 'Feedback Collection', slug: 'measurement/feedback' },
+            { label: 'Continuous Improvement', slug: 'measurement/improvement' },
           ],
         },
       ],

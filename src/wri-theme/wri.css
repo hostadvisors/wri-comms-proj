@@ -303,6 +303,20 @@
     border-radius: 4px;
   }
 
+  .sl-link-button {
+    color: var(--sl-color-text) !important;
+    text-decoration: var(--wri-yellow-500);
+  }
+  .sl-link-button.primary {
+    color: var(--wri-yellow-950) !important;
+    text-decoration: var(--wri-yellow-500);
+    background-color: var(--wri-yellow-500);
+    border: var(--wri-yellow-500)
+  }
+  .sl-link-button.primary:hover {
+    background-color: var(--wri-yellow-700);
+  }
+
 
   /* Additional focus indicator for links */
   a:focus-visible {
@@ -542,7 +556,30 @@
 
   /* Sidebar nav - Use gray text for normal links */
   .sidebar-content :where(a[aria-current="page"])  {
+    color: var(--sl-color-text) !important; /* Dark text for active link */
+    text-decoration: none !important;
+    background-color: var(--wri-yellow-500) !important; /* Light background for active link */
+  }
+  .sidebar-content a{
+    color: var(--sl-color-gray-3);
+    text-decoration: underline var(--wri-link-light);
+  }
+  .sidebar-content a:hover{
+    color: var(--wri-link-light) !important;
+    text-decoration: underline var(--wri-link-light) !important;
+  }
+  :root[data-theme="dark"] .sidebar-content :where(a[aria-current="page"])  {
     color: var(--sl-color-black) !important; /* Dark text for active link */
+    text-decoration: none !important;
+    background-color: var(--wri-yellow-600) !important; /* Light background for active link */
+  }
+  :root[data-theme="dark"] .sidebar-content a{
+    color: var(--sl-color-gray-3);
+    text-decoration: underline var(--sl-color-gray-3);
+  }
+  :root[data-theme="dark"] .sidebar-content a:hover {
+    color: var(--wri-yellow-800) !important;
+    text-decoration: underline var(--wri-yellow-800) !important;
   }
   .sl-sidebar :where(a) {
     border-radius: 6px;
@@ -731,6 +768,17 @@
     padding: 0.125em 0.25em !important;
     border-radius: 3px !important;
     font-size: 0.75em !important;
+  }
+
+  .pagination-links a {
+    color: var(--sl-color-text) !important;
+    text-decoration: none;
+  }
+  .pagination-links a .link-title {
+    color: var(--wri-yellow);
+  }
+  :root[data-theme="dark"] .pagination-links a .link-title {
+    color: var(--wri-yellow-800);
   }
 
   /* Dark Mode Overrides for comprehensive sidebar */
