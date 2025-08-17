@@ -87,7 +87,7 @@ npm run dev
 ### Environment Setup:
 Create a `.env` file with your authentication password:
 ```bash
-WRI_AUTH_PASSWORD=your-secure-password
+PLAYBOOK_PASSWORD=your-secure-password
 ```
 
 ## 🧞 Available Commands
@@ -149,7 +149,7 @@ The site is configured for deployment on Netlify at `wri.brandkit.host`:
 
 ### Environment Variables:
 Set the following in your Netlify dashboard:
-- `WRI_AUTH_PASSWORD`: Password for site access
+- `PLAYBOOK_PASSWORD`: Password for site access
 
 ## 📚 Content Management
 

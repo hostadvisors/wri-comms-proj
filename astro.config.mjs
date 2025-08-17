@@ -1,10 +1,12 @@
 // astro.config.ts
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   site: 'https://wri.brandkit.host',
   output: 'server',
+  adapter: netlify(),
 
   integrations: [
     starlight({
