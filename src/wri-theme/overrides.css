@@ -1,0 +1,405 @@
+/* ========================================================================
+   WRI Starlight Overrides - Framework-Specific Customizations
+   - Site navigation and header customizations
+   - Sidebar navigation styling
+   - Table of contents customizations
+   - Search component theming
+   - Pagination and utility overrides
+   ======================================================================== */
+
+@layer wri-overrides;
+
+@layer wri-overrides {
+  /* =====================================================================
+     Site Header and Navigation
+     ===================================================================== */
+  /* Header + site title link */
+  .site-title a {
+    color: var(--sl-color-text);
+    font-weight: var(--wri-font-weight-bold);
+    letter-spacing: 0.01em;
+  }
+  .site-title a:hover {
+    color: var(--sl-color-accent);
+  }
+
+  /* Logo sizing: if using <img> or inline SVG in Logo.astro */
+  .site-title img,
+  .site-title svg {
+    height: 28px;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  /* Dark mode logo visibility enhancement */
+  :root[data-theme="dark"] .site-title img {
+    filter: drop-shadow(0 0 0.35px rgba(255,255,255,.35));
+  }
+
+  /* Primary nav (top) */
+  header :where(nav a) {
+    color: var(--sl-color-text);
+    font-weight: var(--wri-font-weight-medium);
+  }
+  header :where(nav a:hover) {
+    color: var(--sl-color-accent);
+  }
+
+  /* =====================================================================
+     Enhanced Blockquotes - Starlight Compatible
+     ===================================================================== */
+  blockquote {
+    border-left: 3px solid var(--sl-color-accent);
+    padding-left: 1rem;
+    color: color-mix(in oklab, var(--sl-color-text) 80%, gray);
+    background: color-mix(in oklab, var(--sl-color-accent-low) 25%, transparent);
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* =====================================================================
+     Sidebar Navigation - WRI styling
+     ===================================================================== */
+  /* Sidebar base styling - better legibility */
+  .sidebar-content a,
+  .sl-sidebar a,
+  .sidebar-nav a,
+  [data-sidebar] a,
+  nav[aria-labelledby] a,
+  aside nav a,
+  .starlight-aside nav a {
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    font-weight: var(--wri-font-weight-light);
+    color: var(--sl-color-gray-4) !important; /* Better legibility in light mode */
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  /* Sidebar hover states - WRI green colors */
+  .sidebar-content a:hover,
+  .sl-sidebar a:hover,
+  .sidebar-nav a:hover,
+  [data-sidebar] a:hover,
+  nav[aria-labelledby] a:hover,
+  aside nav a:hover,
+  .starlight-aside nav a:hover {
+    color: var(--sl-color-text) !important; /* Full text color on hover */
+    background: color-mix(in oklab, var(--wri-yellow) 40%, transparent);
+    font-weight: var(--wri-font-weight-medium);
+  }
+
+  /* Active/Current Page Links - Gold highlight with better contrast */
+  .sidebar-content a[aria-current="page"],
+  .sl-sidebar a[aria-current="page"],
+  .sidebar-nav a[aria-current="page"],
+  [data-sidebar] a[aria-current="page"],
+  nav[aria-labelledby] a[aria-current="page"],
+  aside nav a[aria-current="page"],
+  .starlight-aside nav a[aria-current="page"],
+  .sl-sidebar li.is-active > a,
+  .sl-sidebar a[aria-current]:not([aria-current="false"]),
+  .sidebar-nav a[aria-current]:not([aria-current="false"]),
+  [data-sidebar] a[aria-current]:not([aria-current="false"]),
+  nav[aria-labelledby] a[aria-current]:not([aria-current="false"]),
+  aside nav a[aria-current]:not([aria-current="false"]),
+  .starlight-aside nav a[aria-current]:not([aria-current="false"]) {
+    color: var(--wri-slate-900) !important; /* Dark text for contrast */
+    font-weight: var(--wri-font-weight-medium) !important;
+    border-radius: 6px !important;
+  }
+
+  .sidebar-content a[aria-current="page"]:hover,
+  .sl-sidebar a[aria-current="page"]:hover,
+  .sidebar-nav a[aria-current="page"]:hover,
+  [data-sidebar] a[aria-current="page"]:hover,
+  nav[aria-labelledby] a[aria-current="page"]:hover,
+  aside nav a[aria-current="page"]:hover,
+  .starlight-aside nav a[aria-current="page"]:hover,
+  .sl-sidebar li.is-active > a:hover {
+    color: var(--wri-slate-900) !important;
+  }
+
+  /* Dark mode sidebar adjustments - improved visibility */
+  :root[data-theme="dark"] .sidebar-content a,
+  :root[data-theme="dark"] .sl-sidebar a,
+  :root[data-theme="dark"] .sidebar-nav a,
+  :root[data-theme="dark"] [data-sidebar] a,
+  :root[data-theme="dark"] nav[aria-labelledby] a,
+  :root[data-theme="dark"] aside nav a,
+  :root[data-theme="dark"] .starlight-aside nav a {
+    color: var(--sl-color-gray-2) !important; /* Much brighter for better readability */
+  }
+
+  :root[data-theme="dark"] .sidebar-content a:hover,
+  :root[data-theme="dark"] .sl-sidebar a:hover,
+  :root[data-theme="dark"] .sidebar-nav a:hover,
+  :root[data-theme="dark"] [data-sidebar] a:hover,
+  :root[data-theme="dark"] nav[aria-labelledby] a:hover,
+  :root[data-theme="dark"] aside nav a:hover,
+  :root[data-theme="dark"] .starlight-aside nav a:hover {
+    background: color-mix(in oklab, var(--sl-color-accent-low) 40%, transparent);
+    color: var(--sl-color-text) !important;
+  }
+
+  /* Dark mode active sidebar links */
+  :root[data-theme="dark"] .sidebar-content a[aria-current="page"],
+  :root[data-theme="dark"] .sl-sidebar a[aria-current="page"],
+  :root[data-theme="dark"] .sidebar-nav a[aria-current="page"],
+  :root[data-theme="dark"] [data-sidebar] a[aria-current="page"],
+  :root[data-theme="dark"] nav[aria-labelledby] a[aria-current="page"],
+  :root[data-theme="dark"] aside nav a[aria-current="page"],
+  :root[data-theme="dark"] .starlight-aside nav a[aria-current="page"],
+  :root[data-theme="dark"] .sl-sidebar li.is-active > a {
+    background: var(--wri-gold-bg) !important;
+    color: var(--wri-slate-900) !important; /* Dark text on yellow background */
+  }
+
+  :root[data-theme="dark"] .sidebar-content a[aria-current="page"]:hover,
+  :root[data-theme="dark"] .sl-sidebar a[aria-current="page"]:hover,
+  :root[data-theme="dark"] .sidebar-nav a[aria-current="page"]:hover,
+  :root[data-theme="dark"] [data-sidebar] a[aria-current="page"]:hover,
+  :root[data-theme="dark"] nav[aria-labelledby] a[aria-current="page"]:hover,
+  :root[data-theme="dark"] aside nav a[aria-current="page"]:hover,
+  :root[data-theme="dark"] .starlight-aside nav a[aria-current="page"]:hover,
+  :root[data-theme="dark"] .sl-sidebar li.is-active > a:hover {
+    background: var(--wri-gold-accessible) !important;
+    color: var(--wri-slate-900) !important;
+  }
+
+  /* =====================================================================
+     Table of Contents (Right Sidebar)
+     ===================================================================== */
+  /* TOC base styling */
+  .sl-toc a {
+    color: var(--sl-color-gray-4);
+    transition: color 0.2s ease;
+  }
+
+  /* TOC links - active page styling */
+  .sl-toc a[aria-current="page"] {
+    font-weight: var(--wri-font-weight-bold) !important;
+    background: var(--wri-gold-bg) !important;
+    color: var(--wri-slate-700) !important;
+    border-radius: 4px;
+    padding: 0.125rem 0.25rem;
+  }
+  
+  .sl-toc a:hover {
+    color: var(--sl-color-text-accent) !important;
+  }
+
+  /* Dark mode TOC - improved visibility */
+  :root[data-theme="dark"] .sl-toc a {
+    color: var(--sl-color-gray-2) !important; /* Much brighter for better readability */
+  }
+
+  :root[data-theme="dark"] .sl-toc a[aria-current="page"] {
+    font-weight: var(--wri-font-weight-bold) !important;
+    background: var(--wri-gold-bg) !important;
+    color: var(--wri-slate-900) !important; /* Dark text on yellow background */
+  }
+  
+  :root[data-theme="dark"] .sl-toc a:hover {
+    color: var(--wri-link-dark) !important;
+  }
+
+  /* =====================================================================
+     Search Component Styling
+     ===================================================================== */
+  /* Search button - Simple accessible styling */
+  .sl-search button,
+  .search-dialog button {
+    border: 1px solid var(--sl-color-hairline);
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .sl-search button:hover,
+  .search-dialog button:hover {
+    border-color: var(--wri-gold-bg);
+  }
+
+  /* Ensure cmd+k shortcut is visible */
+  .sl-search button kbd,
+  .search-dialog kbd {
+    background: var(--sl-color-gray-2);
+    color: var(--sl-color-text);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 4px;
+    padding: 0.125rem 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  /* =====================================================================
+     Starlight Link Buttons and CTAs
+     ===================================================================== */
+  .sl-link-button {
+    color: var(--sl-color-text) !important;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+  }
+  .sl-link-button.primary {
+    color: var(--wri-yellow-950) !important;
+    background-color: var(--wri-yellow-500);
+    border: 1px solid var(--wri-yellow-500);
+  }
+  .sl-link-button.primary:hover {
+    background-color: var(--wri-yellow-700);
+    border-color: var(--wri-yellow-700);
+  }
+
+  /* =====================================================================
+     Pagination Links
+     ===================================================================== */
+  .pagination-links a {
+    color: var(--sl-color-text) !important;
+    text-decoration: none;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--sl-color-bg);
+    transition: all 0.2s ease;
+  }
+
+  .pagination-links a:hover {
+    border-color: var(--wri-gold-bg);
+    background: color-mix(in srgb, var(--wri-gold-bg) 5%, var(--sl-color-bg));
+  }
+
+  .pagination-links a .link-title {
+    color: var(--wri-yellow);
+    font-weight: var(--wri-font-weight-medium);
+  }
+
+  :root[data-theme="dark"] .pagination-links a .link-title {
+    color: var(--wri-yellow-800);
+  }
+
+  /* =====================================================================
+     Main Navigation - Keep green links for header navigation
+     ===================================================================== */
+  .sl-nav a,
+  header nav a {
+    color: var(--wri-link-light);
+    text-decoration: none;
+  }
+
+  .sl-nav a:hover,
+  header nav a:hover {
+    color: var(--wri-link-hover-light);
+    text-decoration: underline;
+  }
+
+  :root[data-theme="dark"] .sl-nav a,
+  :root[data-theme="dark"] header nav a {
+    color: var(--wri-link-dark);
+  }
+
+  :root[data-theme="dark"] .sl-nav a:hover,
+  :root[data-theme="dark"] header nav a:hover {
+    color: var(--wri-link-hover-dark);
+  }
+
+  /* =====================================================================
+     Callouts and Asides - Enhanced with WRI colors
+     ===================================================================== */
+  .callout, .admonition, .sl-callout {
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    background: var(--sl-color-bg);
+    margin: 1rem 0;
+  }
+
+  /* Callout titles */
+  .callout > .callout-title,
+  .admonition > .admonition-title,
+  .sl-callout > .sl-callout-title {
+    font-weight: var(--wri-font-weight-bold);
+    margin-bottom: 0.35rem;
+  }
+
+  /* Semantic callout variants */
+  .callout.info, .admonition.info, .sl-callout.info {
+    background: var(--sl-color-blue-low);
+    border-color: var(--sl-color-blue);
+  }
+  .callout.success, .admonition.success, .sl-callout.success {
+    background: var(--sl-color-green-low);
+    border-color: var(--sl-color-green);
+  }
+  .callout.warning, .admonition.warning, .sl-callout.warning {
+    background: var(--sl-color-orange-low);
+    border-color: var(--sl-color-orange);
+  }
+  .callout.danger, .admonition.danger, .sl-callout.danger {
+    background: var(--sl-color-red-low);
+    border-color: var(--sl-color-red);
+  }
+
+  /* =====================================================================
+     Badges and Labels
+     ===================================================================== */
+  .sl-badge,
+  .badge {
+    background: var(--wri-gold-bg);
+    color: var(--wri-slate-900);
+    padding: 0.125rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: var(--wri-font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* =====================================================================
+     Footer Styling
+     ===================================================================== */
+  footer {
+    border-top: 1px solid var(--sl-color-hairline);
+    background: var(--sl-color-bg);
+    color: var(--sl-color-gray-5);
+    padding: 2rem 0;
+  }
+
+  footer a {
+    color: var(--wri-link-light);
+  }
+
+  footer a:hover {
+    color: var(--wri-link-hover-light);
+  }
+
+  :root[data-theme="dark"] footer a {
+    color: var(--wri-link-dark);
+  }
+
+  :root[data-theme="dark"] footer a:hover {
+    color: var(--wri-link-hover-dark);
+  }
+
+  /* =====================================================================
+     Images and Media
+     ===================================================================== */
+  :where(.prose img, .sl-markdown-content img) {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+  }
+
+  /* =====================================================================
+     Fallback for Astro Classes
+     ===================================================================== */
+  [class*="astro-"] {
+    font-family: var(--sl-font);
+  }
+
+  :root[data-theme="dark"] [class*="astro-"] {
+    font-family: var(--sl-font);
+  }
+}

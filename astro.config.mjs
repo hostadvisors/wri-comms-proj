@@ -22,7 +22,7 @@ export default defineConfig({
         '@fontsource/noto-sans/300.css',
         '@fontsource/noto-sans/500.css',
         '@fontsource/noto-sans/700.css',
-        './src/wri-theme/wri.css',
+        './src/wri-theme/wri-theme.css',
       ],
 
       components: {

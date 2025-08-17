@@ -1,0 +1,481 @@
+/* ========================================================================
+   WRI Components - Layout and UI Component Styles
+   - Typography and base element styling
+   - Form elements and interactive components
+   - Layout components and utility classes
+   - Header layout and navigation components
+   ======================================================================== */
+
+@layer wri-overrides;
+
+@layer wri-overrides {
+  /* =====================================================================
+     Typography - Enhanced readability with WRI brand font
+     ===================================================================== */
+  html {
+    font-family: var(--sl-font);
+    font-weight: var(--wri-font-weight-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+
+  /* Typography hierarchy */
+  h1, .sl-markdown-content h1 {
+    font-family: var(--sl-font);
+    font-weight: var(--wri-font-weight-bold);
+  }
+  
+  h2, .sl-markdown-content h2 {
+    font-family: var(--sl-font);
+    font-weight: var(--wri-font-weight-bold);
+  }
+  
+  h3, .sl-markdown-content h3 {
+    font-family: var(--sl-font);
+    font-weight: var(--wri-font-weight-bold);
+  }
+  
+  h4, .sl-markdown-content h4 {
+    font-family: var(--sl-font);
+    font-weight: var(--wri-font-weight-medium);
+  }
+  
+  h5, .sl-markdown-content h5 {
+    font-family: var(--sl-font);
+    font-weight: var(--wri-font-weight-medium);
+  }
+  
+  h6, .sl-markdown-content h6 {
+    font-family: var(--sl-font);
+    font-weight: var(--wri-font-weight-medium);
+  }
+
+  /* Body text */
+  p, .sl-markdown-content p,
+  li, .sl-markdown-content li {
+    font-family: var(--sl-font);
+    font-weight: var(--wri-font-weight-light);
+    line-height: var(--sl-text-body-line);
+  }
+
+  /* Strong and bold elements */
+  strong, b,
+  .sl-markdown-content strong,
+  .sl-markdown-content b {
+    font-weight: var(--wri-font-weight-bold);
+  }
+
+  /* Emphasis with medium weight for better hierarchy */
+  em, .sl-markdown-content em {
+    font-weight: var(--wri-font-weight-medium);
+    font-style: normal;
+  }
+
+  /* =====================================================================
+     Links - WCAG AA Compliant with WRI brand treatment
+     ===================================================================== */
+  a {
+    color: var(--wri-link-light);
+    text-decoration: underline;
+    text-underline-offset: 0.125em;
+    text-decoration-thickness: 1px;
+    text-decoration-color: color-mix(in srgb, var(--wri-link-light) 60%, transparent);
+    transition: all 0.2s ease;
+  }
+  
+  a:hover, a:focus {
+    color: var(--wri-link-hover-light);
+    text-decoration-color: var(--wri-link-hover-light);
+  }
+
+  /* Dark mode links */
+  :root[data-theme="dark"] a {
+    color: var(--wri-link-dark);
+    text-decoration-color: color-mix(in srgb, var(--wri-link-dark) 60%, transparent);
+  }
+  
+  :root[data-theme="dark"] a:hover,
+  :root[data-theme="dark"] a:focus {
+    color: var(--wri-link-hover-dark);
+    text-decoration-color: var(--wri-link-hover-dark);
+  }
+
+  /* =====================================================================
+     Selection and Focus Styling
+     ===================================================================== */
+  ::selection {
+    background: color-mix(in srgb, var(--sl-color-accent) 25%, transparent);
+    color: inherit;
+  }
+
+  /* Enhanced focus ring system - WCAG 2.1 AA compliant */
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 3px solid var(--wri-yellow);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Additional focus indicator for links */
+  a:focus-visible {
+    background: color-mix(in srgb, var(--wri-focus) 15%, transparent);
+  }
+
+  /* Starlight Link Button Styles */
+  .sl-link-button {
+    color: var(--sl-color-text) !important;
+    text-decoration: none;
+  }
+  .sl-link-button.primary {
+    color: var(--wri-yellow-950) !important;
+    text-decoration: none;
+    background-color: var(--wri-yellow-500);
+    border: 1px solid var(--wri-yellow-500);
+  }
+  .sl-link-button.primary:hover {
+    background-color: var(--wri-yellow-700);
+  }
+
+  /* =====================================================================
+     Buttons - WRI Yellow background with accessible contrast
+     ===================================================================== */
+  :where(button, .button, .btn, [role="button"]) {
+    background: var(--wri-gold-bg);
+    color: var(--sl-color-text);
+    border: 1px solid var(--wri-gold-bg);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-weight: var(--wri-font-weight-medium);
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+  }
+  
+  :where(button, .button, .btn, [role="button"]):hover,
+  :where(button, .button, .btn, [role="button"]):focus {
+    background: var(--wri-gold-accessible);
+    border-color: var(--wri-gold-accessible);
+  }
+
+  /* Secondary button styles */
+  :where(.button-secondary, .btn-secondary, button[data-variant="secondary"]) {
+    background: transparent;
+    color: var(--wri-gold-bg);
+    border: 1px solid var(--wri-gold-bg);
+  }
+  
+  :where(.button-secondary, .btn-secondary, button[data-variant="secondary"]):hover,
+  :where(.button-secondary, .btn-secondary, button[data-variant="secondary"]):focus {
+    background: var(--wri-gold-bg);
+    color: #FFFFFF;
+  }
+
+  /* Dark mode button adjustments */
+  :root[data-theme="dark"] :where(button, .button, .btn, [role="button"]) {
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text) !important;
+    border-color: var(--wri-yellow-900);
+  }
+  
+  :root[data-theme="dark"] :where(button, .button, .btn, [role="button"]):hover,
+  :root[data-theme="dark"] :where(button, .button, .btn, [role="button"]):focus {
+    background: var(--wri-yellow-900);
+    border-color: var(--wri-yellow);
+    color: var(--sl-color-text);
+  }
+
+  /* Dark mode secondary buttons */
+  :root[data-theme="dark"] :where(.button-secondary, .btn-secondary, button[data-variant="secondary"]) {
+    background: transparent;
+    color: var(--wri-gold-bg);
+    border-color: var(--wri-gold-bg);
+  }
+  
+  :root[data-theme="dark"] :where(.button-secondary, .btn-secondary, button[data-variant="secondary"]):hover,
+  :root[data-theme="dark"] :where(.button-secondary, .btn-secondary, button[data-variant="secondary"]):focus {
+    background: var(--wri-gold-bg);
+    color: var(--wri-slate-900);
+  }
+
+  /* =====================================================================
+     Code Styling - Proper visibility and contrast
+     ===================================================================== */
+
+     
+  .expressive-code .frame {
+    color: var(--sl-color-text);
+    border: 0;
+  }
+  pre {
+    width: 100%;
+    overflow: clip;
+    border: 0;
+    border-radius: 8px;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+  pre code {
+    max-width: auto;
+    background: var(--sl-color-gray-6) !important;
+    color: var(--sl-color-text);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 4px;
+    padding: 0.125em 0.375em;
+    font-size: 0.875em;
+    font-weight: var(--wri-font-weight-medium);
+    font-family: ui-monospace, "SF Mono", Monaco, "Cascadia Code", "Segoe UI Mono", 
+                 "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+                 "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  }
+
+  /* Ensure code is visible in dark mode */
+  :root[data-theme="dark"] pre code {
+    background: var(--sl-color-bg-inline-code);
+    color: var(--sl-color-text);
+    border-color: var(--sl-color-hairline);
+  }
+
+  pre code {
+    display: block;
+    background: var(--sl-color-gray-1);
+    color: var(--sl-color-text);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--sl-color-hairline);
+    overflow-x: auto;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  :root[data-theme="dark"] pre code {
+    background: var(--wri-slate-800);
+    color: var(--wri-slate-100);
+    border-color: var(--wri-slate-600);
+  }
+
+  /* =====================================================================
+     Tables - Enhanced styling with proper color hierarchy
+     ===================================================================== */
+  :where(table) {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  :where(th, td) {
+    border-bottom: 1px solid var(--sl-color-hairline-light);
+    padding: 0.875rem 1rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  :where(thead th) {
+    font-weight: var(--wri-font-weight-bold);
+    color: var(--sl-color-text);
+    background: var(--sl-color-gray-2);
+    border-bottom: 2px solid var(--sl-color-hairline);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  :where(tbody tr) {
+    transition: background-color 0.15s ease;
+  }
+
+  :where(tbody tr):hover {
+    background: color-mix(in srgb, var(--sl-color-accent-low) 20%, transparent);
+  }
+
+  :where(tbody tr):nth-child(even) {
+    background: color-mix(in srgb, var(--sl-color-gray-1) 30%, transparent);
+  }
+
+  :where(tbody tr):nth-child(even):hover {
+    background: color-mix(in srgb, var(--sl-color-accent-low) 25%, var(--sl-color-gray-1));
+  }
+
+  /* Dark mode table improvements */
+  :root[data-theme="dark"] :where(thead th) {
+    background: var(--sl-color-gray-1);
+    color: var(--sl-color-text);
+  }
+
+  :root[data-theme="dark"] :where(tbody tr):nth-child(even) {
+    background: color-mix(in srgb, var(--sl-color-gray-1) 40%, transparent);
+  }
+
+  :root[data-theme="dark"] :where(tbody tr):hover {
+    background: color-mix(in srgb, var(--sl-color-accent-low) 15%, transparent);
+  }
+
+  :root[data-theme="dark"] :where(tbody tr):nth-child(even):hover {
+    background: color-mix(in srgb, var(--sl-color-accent-low) 20%, var(--sl-color-gray-1));
+  }
+
+  /* =====================================================================
+     Lists - Improved spacing and hierarchy
+     ===================================================================== */
+  :where(ul, ol) {
+    line-height: 1.6;
+  }
+
+  /* =====================================================================
+     Form Elements - Search input and other form styling
+     ===================================================================== */
+  :where(input[type="search"], .DocSearch-Input) {
+    border: 1px solid var(--sl-color-hairline);
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text) !important;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  :where(input[type="search"], .DocSearch-Input):focus-visible {
+    outline: 2px solid var(--wri-gold-bg);
+    outline-offset: 2px;
+    border-color: var(--wri-gold-bg);
+  }
+
+  /* Dark mode search text */
+  :root[data-theme="dark"] :where(input[type="search"], .DocSearch-Input) {
+    color: var(--sl-color-text) !important;
+    background: var(--sl-color-bg);
+    border-color: var(--sl-color-hairline);
+  }
+
+  /* =====================================================================
+     Header Layout Components
+     ===================================================================== */
+  .custom-header-content {
+    gap: var(--sl-nav-gap);
+    align-items: center;
+    width: 100%;
+  }
+
+  .site-title-area {
+    /* Match the sidebar width */
+    width: var(--sl-sidebar-width, 18.5rem);
+    min-width: var(--sl-sidebar-width, 18.5rem);
+    max-width: var(--sl-sidebar-width, 18.5rem);
+    flex-shrink: 0;
+  }
+
+  .content-area {
+    /* Fill remaining space */
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--sl-nav-gap);
+  }
+
+  .search-area {
+    /* Search stays left-aligned with fixed width */
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    width: var(--sl-sidebar-width, 18.5rem);
+    min-width: var(--sl-sidebar-width, 18.5rem);
+    max-width: var(--sl-sidebar-width, 18.5rem);
+  }
+
+  /* Target the actual search input inside the search component */
+  .search-area :global(input[type="search"]) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .search-area :global(.search-input) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .controls-area {
+    /* Controls stay right-aligned */
+    justify-content: flex-end;
+    flex: 0 0 auto;
+  }
+
+  /* Logout Button Component */
+  .logout-button {
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--sl-color-gray-1) !important;
+    border: 1px solid var(--sl-color-gray-5);
+    background-color: var(--sl-color-gray-6);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    margin-left: 2rem;
+    text-decoration: none !important;
+    font-size: var(--sl-text-xs);
+    line-height: 1;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+
+  .logout-button:hover {
+    background-color: var(--wri-gold-bg) !important;
+    border-color: var(--wri-gold-bg) !important;
+    color: white !important;
+    text-decoration: none !important;
+  }
+
+  .logout-button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  /* =====================================================================
+     Responsive Breakpoints
+     ===================================================================== */
+  /* Mobile adjustments */
+  @media (max-width: 50rem) {
+    .site-title-area {
+      width: auto;
+      min-width: auto;
+      max-width: none;
+      flex-shrink: 1;
+    }
+
+    .search-area {
+      display: none; /* Hide search on mobile */
+    }
+
+    /* On mobile, make logout button more visible */
+    .logout-button {
+      background-color: var(--wri-gold-bg) !important;
+      border-color: var(--wri-gold-bg) !important;
+      color: white !important;
+      text-decoration: none !important;
+    }
+    
+    .logout-button:hover {
+      background-color: var(--wri-gold-accessible) !important;
+      border-color: var(--wri-gold-accessible) !important;
+      text-decoration: none !important;
+    }
+  }
+
+  /* Tablet size - reduce search width */
+  @media (max-width: 768px) and (min-width: 50rem) {
+    .search-area {
+      width: 150px;
+      max-width: 150px;
+    }
+  }
+
+  /* Small desktop - slightly smaller search */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .search-area {
+      width: 180px;
+      max-width: 180px;
+    }
+  }
+}
