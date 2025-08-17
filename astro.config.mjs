@@ -4,12 +4,15 @@ import starlight from '@astrojs/starlight';
 
 export default defineConfig({
   site: 'https://wri.brandkit.host',
+  output: 'server',
 
   integrations: [
     starlight({
       title: '',
       description:
         'Documentation themed for the World Resources Institute using Astro Starlight.',
+      // Disable prerendering for all Starlight pages
+      prerender: false,
 	  logo: {
 		light: './src/wri-theme/assets/logo-light.svg',
 		dark: './src/wri-theme/assets/logo-dark.svg',
@@ -23,6 +26,7 @@ export default defineConfig({
       ],
 
       components: {
+        Header: './src/wri-theme/overrides/Header.astro',
       },
 
       sidebar: [

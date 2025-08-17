@@ -1,0 +1,56 @@
+---
+title: "Logged Out"
+description: "You have been logged out of the WRI Internal Communications Playbook"
+template: splash
+---
+
+import { Card } from '@astrojs/starlight/components';
+
+<div style="max-width: 500px; margin: 0 auto;">
+
+<Card title="👋 Logged Out" icon="check">
+
+You have been successfully logged out of the WRI Internal Communications Playbook.
+
+<div style="margin-top: 2rem; text-align: center;">
+  <a 
+    href="/" 
+    style="
+      display: inline-block;
+      background: var(--wri-gold-bg); 
+      color: white; 
+      padding: 0.75rem 1.5rem; 
+      border-radius: 6px; 
+      text-decoration: none; 
+      font-weight: 500;
+      margin-right: 1rem;
+    "
+  >
+    Return to Homepage
+  </a>
+  
+  <a 
+    href="/login" 
+    style="
+      display: inline-block;
+      background: transparent; 
+      color: var(--wri-gold-bg); 
+      border: 1px solid var(--wri-gold-bg);
+      padding: 0.75rem 1.5rem; 
+      border-radius: 6px; 
+      text-decoration: none; 
+      font-weight: 500;
+    "
+  >
+    Login Again
+  </a>
+</div>
+
+</Card>
+
+</div>
+
+<script>
+  // Clear the authentication cookie
+  document.cookie = 'wri-auth=; Max-Age=0; path=/; secure; samesite=strict';
+</script>
