@@ -2,7 +2,7 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { Card } from '@astrojs/starlight/components';
 
-const PROTECTED_PASSWORD = import.meta.env.PLAYBOOK_PASSWORD || 'wri-internal-2025';
+const PROTECTED_PASSWORD = import.meta.env.PLAYBOOK_PASSWORD;
 
 // Get URL parameters
 const url = Astro.url;
