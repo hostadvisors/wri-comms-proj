@@ -66,7 +66,7 @@ export default defineConfig({
         {
           label: 'Templates',
           items: [
-            { label: 'Templates & Resources', slug: 'templates/templates' },
+            { label: 'Templates & Resources', slug: 'templates/resources' },
           ],
         },
         {
