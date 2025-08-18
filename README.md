@@ -15,7 +15,8 @@ This documentation site serves as the central resource for WRI's internal commun
 ### Key Features:
 - **🎨 Custom WRI Branding**: Complete theme implementation with official WRI colors and typography
 - **🔐 Password Protection**: Secure access for internal team members
-- **📱 Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **� Full-Text Search**: Pagefind-powered search across all documentation content
+- **�📱 Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **🌙 Dark Mode Support**: Full light/dark theme compatibility
 - **♿ WCAG Compliant**: Meets accessibility standards with proper contrast ratios
 - **⚡ Fast Performance**: Built on Astro for optimal loading speeds
