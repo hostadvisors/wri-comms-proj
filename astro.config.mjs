@@ -35,9 +35,9 @@ export default defineConfig({
         {
           label: 'Who We Are',
           items: [
-            { label: 'IC Roles & Responsibilities', slug: 'who-we-are/roles' },
-            { label: 'Internal Comms Network', slug: 'who-we-are/network' },
+            { label: 'Network', slug: 'who-we-are/roles' },
             { label: 'Structure', slug: 'who-we-are/structure' },
+            { label: 'Local teams', slug: 'who-we-are/network' },
           ],
         },
         {
