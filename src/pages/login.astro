@@ -7,7 +7,7 @@ const PROTECTED_PASSWORD = import.meta.env.PLAYBOOK_PASSWORD;
 // Get URL parameters and form data
 const url = Astro.url;
 const error = url.searchParams.get('error');
-let returnTo = url.searchParams.get('returnTo') || '/who-we-are/network/';
+let returnTo = url.searchParams.get('returnTo') || '/foundation/overview/';
 
 let password = null;
 // Handle both GET (from URL params) and POST (from form data)
@@ -36,7 +36,7 @@ if ((Astro.request.method === 'POST' || Astro.request.method === 'GET') && passw
     });
     
     // Use relative redirect to avoid production URL issues
-    const redirectPath = returnTo || '/who-we-are/network/';
+    const redirectPath = returnTo || '/foundation/overview/';
     return new Response('', {
       status: 302,
       headers: {
