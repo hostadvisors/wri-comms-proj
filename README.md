@@ -121,8 +121,15 @@ For detailed theme documentation, see [`src/wri-theme/README.md`](src/wri-theme/
 
 ## 🔐 Authentication System
 
-The site features middleware-based password protection to ensure secure access for internal team members:
+The site features middleware-based password protection with environment-aware behavior:
 
+### Development Mode:
+- **No Authentication Required**: All pages accessible without login for easier development
+- **DEV Indicator**: Shows "DEV" badge in header to indicate development mode
+- **Login/Logout Pages**: Still functional for testing authentication flow
+
+### Production Mode:
+- **Password Protection**: Requires authentication for all protected pages
 - **Login Page**: Simple password authentication at `/login`
 - **Session Management**: Cookie-based sessions for seamless navigation
 - **Auto-redirect**: Unauthorized users redirected to login

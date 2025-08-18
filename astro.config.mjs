@@ -5,7 +5,8 @@ import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   output: 'server',
-  adapter: netlify(),
+  // Only use Netlify adapter in production
+  adapter: process.env.NODE_ENV === 'production' ? netlify() : undefined,
 
   integrations: [
     starlight({

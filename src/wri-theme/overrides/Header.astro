@@ -9,6 +9,7 @@ import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
 // Check if user is authenticated
 const isAuthenticated = Astro.cookies.get('wri-auth')?.value === 'authenticated';
 const isHomePage = Astro.url.pathname === '/';
+const isDev = import.meta.env.DEV || import.meta.env.NODE_ENV === 'development' || import.meta.env.MODE === 'development';
 ---
 
 <div class="custom-header-content sl-flex">
@@ -23,7 +24,12 @@ const isHomePage = Astro.url.pathname === '/';
 			<SocialIcons {...Astro.props} />
 			<ThemeSelect {...Astro.props} />
 			<LanguageSelect {...Astro.props} />
-			{isAuthenticated && !isHomePage && (
+			{isDev && (
+				<div class="dev-indicator" style="padding: 0.25rem 0.5rem; background: var(--sl-color-accent); color: white; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">
+					DEV
+				</div>
+			)}
+			{!isDev && isAuthenticated && !isHomePage && (
 				<a href="/logout" class="logout-button sl-flex">
 					<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 						<path d="M17 8l4 4-4 4-1.41-1.41L17.17 13H9v-2h8.17l-1.58-1.59L17 8zM5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h7v-2H5V5z"/>

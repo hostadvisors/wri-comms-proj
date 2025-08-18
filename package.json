@@ -1,9 +1,9 @@
 {
-  "name": "shaggy-solstice",
+  "name": "wri-comms-playbook",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "NODE_ENV=development astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
