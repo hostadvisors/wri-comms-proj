@@ -1,0 +1,135 @@
+---
+title: Developing a Communications Strategy
+description: How to develop effective internal communications strategies and manage change initiatives
+---
+
+# Developing a Communications Strategy
+
+Effective internal communication starts with a strategic plan. Whether you are developing an annual strategy or planning a specific campaign, the same core principles apply.
+
+## Start With a Plan
+
+**Effective internal communication starts with a plan.** A strong strategy ensures that your messages support organizational goals, reach the right audiences, and drive the right actions.
+
+### Core Strategic Principles
+
+- **Define your goals**: Clarify what success looks like, ensuring alignment with WRI's and your team's strategic priorities
+- **Know your audiences**: Identify key internal audiences and understand what each group needs to know, feel and do. Be specific about your comms objectives for each audience
+- **Craft clear messaging**: Develop a core narrative and tailor messages to resonate with key audiences
+- **Choose the right channels**: Use a mix of formats—such as email, staff meetings, Banyan, Teams, and toolkits—to reach people where they are and reinforce key messages
+- **Build your timeline**: For long-term strategies, create a flexible calendar that maps out key themes and organizational moments. For campaigns, identify key milestones and engagement points
+- **Track your impact**: Establish metrics to measure progress against your goals, and adjust your approach as needed
+
+## Audiences & Objectives
+
+### Identifying Key Internal Audiences
+
+Identify key internal audiences—by team, region, role, or function—and consider their specific needs, concerns, and context.
+
+**Key Questions to Ask:**
+- What does this audience need to do, know or feel as a result of your message?
+- How familiar are they with the topic or change?
+- What tone, language, or framing will resonate most?
+
+### Setting Clear Objectives
+
+Tailor your objectives for each group (e.g., awareness, behavior change, alignment) to ensure your message lands with relevance and impact.
+
+**Example Objectives:**
+- **Leadership**: Understand strategic rationale and be able to communicate key messages to their teams
+- **Program Staff**: Know how changes affect their daily work and project delivery
+- **Support Functions**: Understand operational implications and new processes
+- **Regional Offices**: Adapt global messaging for local context and implementation
+
+## Messaging Framework
+
+### Core Messaging Components
+
+**CONTEXT**: Why we're doing this (including desired outcome / vision of WRI post-change)
+
+**CHANGE**: What's changing
+
+**IMPACT**: What it means for you (including tailored points for different audiences) + what to expect (key dates and milestones)
+
+**ACTION**: What you need to do (clear call to action if relevant); where to find resources & raise questions / share feedback
+
+### Making It Meaningful
+
+Focus on what you want your audiences to do, know or feel. Ensure messages are:
+- **Relevant**: Connected to audience needs and context
+- **Clear**: Easy to understand and actionable
+- **Consistent**: Aligned across all communications
+- **Compelling**: Motivating and engaging
+
+## Channels & Tactics
+
+Choose the right mix of communication channels based on:
+- **Audience preferences**: How does each group prefer to receive information?
+- **Message complexity**: Does the content require detailed explanation or quick updates?
+- **Timing needs**: Is this urgent, routine, or strategic communication?
+- **Feedback requirements**: Do you need two-way dialogue or one-way information sharing?
+
+### Channel Selection Guide
+
+Refer to the [What We Do](/foundation/what-we-do/) section for detailed channel guidelines and best practices.
+
+## Communicating Change
+
+Change communications require special attention to address resistance, build understanding, and drive adoption.
+
+### Change Communication Principles
+
+1. **Start early**: Begin communications before changes are finalized to build awareness and gather input
+2. **Be transparent**: Share the why behind changes, including challenges and expected benefits  
+3. **Address concerns**: Anticipate questions and resistance, providing honest responses
+4. **Provide support**: Offer resources, training, and assistance to help people adapt
+5. **Celebrate progress**: Acknowledge milestones and recognize successful adaptation
+
+### Change Communication Timeline
+
+- **Phase 1 - Awareness**: Build understanding of the need for change
+- **Phase 2 - Engagement**: Involve stakeholders in planning and feedback
+- **Phase 3 - Implementation**: Support adoption with clear guidance and resources
+- **Phase 4 - Reinforcement**: Maintain momentum and address ongoing challenges
+
+## Cascading Information
+
+*Framework in progress: Connect, Communicate, Contextualize. Matrix on who can cascade what. Open to new terminology and approach – this is one of our greatest needs*
+
+### Cascading Framework
+
+Effective cascading ensures that important information flows consistently through the organization while allowing for local adaptation and context.
+
+**Connect**: Ensure leadership alignment before cascading begins
+**Communicate**: Deliver consistent core messages through appropriate channels
+**Contextualize**: Allow local teams to adapt messaging for their specific audience needs
+
+## Tracking Success
+
+### Quantitative Metrics
+- **Basic engagement metrics**: ContactMonkey open/click/read rates
+- **Platform analytics**: Banyan traffic, Stream views, staff meeting attendance
+- **Response tracking**: Survey completion rates, feedback volume
+
+### Qualitative Measures
+- **Feedback quality**: Depth and nature of questions and comments
+- **Behavioral indicators**: Changes in how people discuss or act on information
+- **Sentiment tracking**: Overall tone and reception of communications
+
+### Creating Feedback Opportunities
+
+- **Post-implementation surveys**: Gather feedback after major communications or changes
+- **Pulse surveys**: Regular check-ins on communication effectiveness
+- **Focus groups**: Deep-dive discussions with key stakeholder groups
+- **Open forums**: Town halls, Q&A sessions, and listening sessions
+
+### Limitations and Insights
+
+Recognize the limitations of data and focus on drawing insights from trends rather than individual metrics. Soft metrics and qualitative feedback often provide the most valuable insights for improvement.
+
+## Templates and Resources
+
+- [Internal Communications Plan Template](https://docs.google.com/document/d/1ucjVB-3Idt87UGrGBSJzjTVurjRzy_toDMT2t00YjxE/edit?tab=t.0)
+- Sample communication plans and messaging frameworks
+- Rollout checklist template
+- Communication calendar templates

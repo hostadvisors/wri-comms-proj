@@ -33,68 +33,53 @@ export default defineConfig({
 
       sidebar: [
         {
-          label: 'Foundation',
+          label: 'Who We Are',
           items: [
-            { label: 'Getting Started', slug: 'foundation/overview' },
-            { label: 'Who We Are', slug: 'foundation/who-we-are' },
-            { label: 'Mission & Values', slug: 'foundation/mission-values' },
+            { label: 'IC Roles & Responsibilities', slug: 'who-we-are/roles' },
+            { label: 'Internal Comms Network', slug: 'who-we-are/network' },
+            { label: 'Structure', slug: 'who-we-are/structure' },
           ],
         },
         {
-          label: 'Strategy & Planning',
+          label: 'What We Do',
+          items: [
+            { label: 'Overview', slug: 'what-we-do/overview' },
+            { label: 'Tools & Guidelines', slug: 'what-we-do/tools' },
+            { label: 'Crisis Communications', slug: 'what-we-do/crisis' },
+            { label: 'Toolkits & Resources', slug: 'what-we-do/toolkits' },
+          ],
+        },
+        {
+          label: 'Developing Communications Strategy',
           items: [
             { label: 'Strategy Framework', slug: 'strategy/framework' },
-            { label: 'Audience Analysis', slug: 'strategy/audience-analysis' },
-            { label: 'Message Development', slug: 'strategy/message-development' },
-            { label: 'Channel Planning', slug: 'strategy/channel-planning' },
+            { label: 'Change Management', slug: 'strategy/change' },
+            { label: 'Cascading Communications', slug: 'strategy/cascading' },
           ],
         },
         {
-          label: 'Brand Voice & Tone',
+          label: 'Voice & Tone Guidelines',
           items: [
-            { label: 'Voice Guidelines', slug: 'voice-tone/guidelines' },
-            { label: 'Tone by Audience', slug: 'voice-tone/tone-adaptation' },
-            { label: 'Writing Style Guide', slug: 'voice-tone/writing-style' },
-            { label: 'Messaging Frameworks', slug: 'voice-tone/messaging-frameworks' },
+            { label: 'Guidelines', slug: 'voice-tone/guidelines' },
           ],
         },
         {
-          label: 'Employee Journey',
+          label: 'Templates',
           items: [
-            { label: 'Journey Overview', slug: 'employee-journey/overview' },
-            { label: 'Pre-Boarding', slug: 'employee-journey/pre-boarding' },
-            { label: 'Onboarding', slug: 'employee-journey/onboarding' },
-            { label: 'Career Development', slug: 'employee-journey/development' },
-            { label: 'Recognition & Milestones', slug: 'employee-journey/recognition' },
-            { label: 'Transitions & Changes', slug: 'employee-journey/transitions' },
-            { label: 'Offboarding', slug: 'employee-journey/offboarding' },
+            { label: 'Templates & Resources', slug: 'templates/templates' },
           ],
         },
         {
-          label: 'Content & Channels',
+          label: 'Measurement',
           items: [
-            { label: 'Email Communications', slug: 'channels/email' },
-            { label: 'Internal Newsletters', slug: 'channels/newsletters' },
-            { label: 'Town Halls & Meetings', slug: 'channels/meetings' },
-            { label: 'Digital Workplace', slug: 'channels/digital-workplace' },
-            { label: 'Crisis Communications', slug: 'channels/crisis' },
+            { label: 'Evaluation', slug: 'measurement/evaluation' },
           ],
         },
         {
-          label: 'Templates & Tools',
+          label: 'Related Resources',
           items: [
-            { label: 'Email Templates', slug: 'templates/email' },
-            { label: 'Announcement Templates', slug: 'templates/announcements' },
-            { label: 'Presentation Templates', slug: 'templates/presentations' },
-            { label: 'Planning Tools', slug: 'templates/planning-tools' },
-          ],
-        },
-        {
-          label: 'Measurement & Analytics',
-          items: [
-            { label: 'Success Metrics', slug: 'measurement/metrics' },
-            { label: 'Feedback Collection', slug: 'measurement/feedback' },
-            { label: 'Continuous Improvement', slug: 'measurement/improvement' },
+            { label: 'Comms Resources', slug: 'related-resources/comms' },
+            { label: 'WRI-Wide Resources', slug: 'related-resources/wri-wide' },
           ],
         },
       ],
