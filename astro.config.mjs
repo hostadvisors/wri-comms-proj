@@ -4,8 +4,7 @@ import starlight from '@astrojs/starlight';
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  site: 'https://wri.brandkit.host',
-  output: 'static',
+  output: 'server',
   adapter: netlify(),
 
   integrations: [
@@ -13,7 +12,8 @@ export default defineConfig({
       title: '',
       description:
         'Documentation themed for the World Resources Institute using Astro Starlight.',
-      // Starlight pages will be prerendered by default with static output
+      // Disable prerendering for all Starlight pages
+      prerender: false,
 	  logo: {
 		light: './src/wri-theme/assets/logo-light.svg',
 		dark: './src/wri-theme/assets/logo-dark.svg',

@@ -1,33 +1,56 @@
 ---
-export const prerender = false; // Opt out of static generation for server-side authentication
-
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { Card } from '@astrojs/starlight/components';
 
-const PROTECTED_PASSWORD = import.meta.env.PLAYBOOK_PASSWORD;
+const PROTECTED_PASSWORD = import.meta.env.PLAYBOOK_PASSWORD || 'wri-internal-2025';
 
-// Get URL parameters
+// Get URL parameters and form data
 const url = Astro.url;
 const error = url.searchParams.get('error');
-const returnTo = url.searchParams.get('returnTo') || '/foundation/overview/';
-const password = url.searchParams.get('password');
+let returnTo = url.searchParams.get('returnTo') || '/foundation/overview/';
+
+let password = null;
+// Handle both GET (from URL params) and POST (from form data)
+if (Astro.request.method === 'POST') {
+  const formData = await Astro.request.formData();
+  password = formData.get('password')?.toString();
+  // Get returnTo from form data if available
+  const formReturnTo = formData.get('returnTo')?.toString();
+  if (formReturnTo) {
+    returnTo = formReturnTo;
+  }
+} else if (Astro.request.method === 'GET') {
+  password = url.searchParams.get('password');
+}
 
 // Handle form submission
-if (Astro.request.method === 'GET' && password) {
+if ((Astro.request.method === 'POST' || Astro.request.method === 'GET') && password) {
   if (password === PROTECTED_PASSWORD) {
     // Set authentication cookie for 24 hours
     Astro.cookies.set('wri-auth', 'authenticated', {
       maxAge: 24 * 60 * 60, // 24 hours
       httpOnly: true,
       secure: import.meta.env.PROD,
-      sameSite: 'strict'
+      sameSite: 'strict',
+      path: '/' // Ensure cookie is available site-wide
     });
     
-    // Redirect to the intended page
-    return Astro.redirect(returnTo);
+    // Use relative redirect to avoid production URL issues
+    const redirectPath = returnTo || '/foundation/overview/';
+    return new Response('', {
+      status: 302,
+      headers: {
+        'Location': redirectPath
+      }
+    });
   } else {
     // Invalid password - redirect back with error
-    return Astro.redirect(`/login?error=invalid&returnTo=${encodeURIComponent(returnTo)}`);
+    return new Response('', {
+      status: 302,
+      headers: {
+        'Location': `/login?error=invalid&returnTo=${encodeURIComponent(returnTo)}`
+      }
+    });
   }
 }
 ---
@@ -48,7 +71,7 @@ if (Astro.request.method === 'GET' && password) {
         </div>
       )}
       
-      <form method="get" action="/login" style="margin-top: 1.5rem;">
+      <form method="post" action="/login" style="margin-top: 1.5rem;">
         <input type="hidden" name="returnTo" value={returnTo} />
         <div style="margin-bottom: 1rem;">
           <label for="password" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">
