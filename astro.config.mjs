@@ -36,7 +36,7 @@ export default defineConfig({
           label: 'Who We Are',
           items: [
             { label: 'Network', slug: 'who-we-are/roles' },
-            { label: 'Structure', slug: 'who-we-are/structure' },
+            { label: 'Roles and responsibilities', slug: 'who-we-are/structure' },
             { label: 'Local teams', slug: 'who-we-are/network' },
           ],
         },
