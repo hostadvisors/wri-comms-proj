@@ -35,9 +35,9 @@ export default defineConfig({
         {
           label: 'Who We Are',
           items: [
-            { label: 'Network', slug: 'who-we-are/roles' },
-            { label: 'Roles and responsibilities', slug: 'who-we-are/structure' },
-            { label: 'Local teams', slug: 'who-we-are/network' },
+            { label: 'Overview', slug: 'who-we-are/roles' },
+            { label: 'Internal Comms Network', slug: 'who-we-are/network' },
+            { label: 'Structure', slug: 'who-we-are/structure' },
           ],
         },
         {
@@ -54,23 +54,30 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Developing Communications Strategy',
+          label: 'Creating Strategy',
           items: [
-            { label: 'Strategy Framework', slug: 'strategy/framework' },
-            { label: 'Change Management', slug: 'strategy/change' },
-            { label: 'Cascading Communications', slug: 'strategy/cascading' },
+            { label: 'Creating a plan', slug: 'strategy/framework' },
+            { label: 'Audiences', slug: 'strategy/change' },
+            { label: 'Messaging', slug: 'strategy/cascading' },
+            { label: 'Channel & Tactics', slug: 'strategy/cascading' },
+            { label: 'Cascading', slug: 'strategy/cascading' },
           ],
         },
         {
           label: 'Templates',
           items: [
+            { label: 'See Annex of Handbook v2', slug: 'templates/resources' },
             { label: 'Templates & Resources', slug: 'templates/resources' },
+            { label: 'Crisis Communications', slug: 'what-we-do/crisis' },
           ],
         },
         {
           label: 'Measurement',
           items: [
-            { label: 'Evaluation', slug: 'measurement/evaluation' },
+            { label: 'What to measure', slug: 'measurement/evaluation' },
+            { label: 'How to ask questions', slug: 'measurement/evaluation' },
+            { label: 'After Action Reviews', slug: 'measurement/evaluation' },
+            { label: 'MELA', slug: 'measurement/evaluation' },
           ],
         },
         {

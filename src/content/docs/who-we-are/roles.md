@@ -1,6 +1,6 @@
 ---
-title: Internal Comms Network
-description: Internal Communications Leadership
+title: Overview
+description: Internal Communications roles and responsibilities across WRI
 ---
 
 The Internal Comms network ensures that everyone across WRI, regardless of role or location, is informed, aligned, and connected to our mission and each other.
