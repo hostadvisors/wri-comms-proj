@@ -49,17 +49,17 @@ export default defineConfig({
           ],
         },
         {
+          label: 'Voice & Tone Guidelines',
+          items: [
+            { label: 'Guidelines', slug: 'voice-tone/guidelines' },
+          ],
+        },
+        {
           label: 'Developing Communications Strategy',
           items: [
             { label: 'Strategy Framework', slug: 'strategy/framework' },
             { label: 'Change Management', slug: 'strategy/change' },
             { label: 'Cascading Communications', slug: 'strategy/cascading' },
-          ],
-        },
-        {
-          label: 'Voice & Tone Guidelines',
-          items: [
-            { label: 'Guidelines', slug: 'voice-tone/guidelines' },
           ],
         },
         {
