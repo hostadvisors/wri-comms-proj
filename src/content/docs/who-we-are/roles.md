@@ -3,9 +3,11 @@ title: Overview
 description: Internal Communications roles and responsibilities across WRI
 ---
 
-The Internal Comms network ensures that everyone across WRI, regardless of role or location, is informed, aligned, and connected to our mission and each other.
+The Internal Comms network ensures that everyone across WRI, regardless of role or location, is informed, aligned, and connected to our mission and each other. 
 
-#### Members of our network
+We're made up of a global team as well as regional, country, and program staff working together toward a common goal.
+
+## Members of our network
 
 - **Global internal comms team** (within Core Comms)
     - [Natalya Podgorny](mailto:Natalya.Podgorny@wri.org), Senior Manager of Internal Communications
@@ -20,7 +22,7 @@ The Internal Comms network ensures that everyone across WRI, regardless of role 
     - Key points of contact TBA
 - **Coming soon**: Expanding to colleagues who practice internal comms in global programs and core functions
 
-#### Ways that we connect as a network
+### Ways that we connect as a network
 
 - **Teams**: Shared workspace on MS teams
 - **Email list**: Regular updates and communication from Global team
