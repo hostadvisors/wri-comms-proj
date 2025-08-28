@@ -36,7 +36,7 @@ export default defineConfig({
           label: 'Who We Are',
           items: [
             { label: 'Overview', slug: 'who-we-are/roles' },
-            { label: 'Structure', slug: 'who-we-are/structure' },
+            { label: 'Roles and Responsibilities ', slug: 'who-we-are/structure' },
           ],
         },
         {
@@ -55,7 +55,7 @@ export default defineConfig({
         {
           label: 'Creating Strategy',
           items: [
-            { label: 'Creating a plan', slug: 'strategy/framework' },
+            { label: 'Creating a Plan', slug: 'strategy/framework' },
             { label: 'Audiences', slug: 'strategy/audiences' },
             { label: 'Messaging', slug: 'strategy/messaging' },
             { label: 'Channel & Tactics', slug: 'strategy/channels' },
@@ -65,8 +65,8 @@ export default defineConfig({
         {
           label: 'Measurement',
           items: [
-            { label: 'What to measure', slug: 'measurement/what-to-measure' },
-            { label: 'How to ask questions', slug: 'measurement/questions' },
+            { label: 'What to Measure', slug: 'measurement/what-to-measure' },
+            { label: 'How to Ask Questions', slug: 'measurement/questions' },
             { label: 'After-Action Reviews', slug: 'measurement/aars' },
             { label: 'MELA', slug: 'measurement/mela' },
           ],
