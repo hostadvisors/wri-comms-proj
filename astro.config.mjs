@@ -43,7 +43,6 @@ export default defineConfig({
         {
           label: 'What We Do',
           items: [
-            { label: 'Overview', slug: 'what-we-do/overview' },
             { label: 'Tools & Guidelines', slug: 'what-we-do/tools' },
             { label: 'Crisis Communications', slug: 'what-we-do/crisis' },
             { label: 'Toolkits & Resources', slug: 'what-we-do/toolkits' },
