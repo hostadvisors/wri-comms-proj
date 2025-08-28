@@ -63,20 +63,18 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Templates',
-          items: [
-            { label: 'See Annex of Handbook v2', slug: 'templates/resources' },
-            { label: 'Templates & Resources', slug: 'templates/resources' },
-            { label: 'Crisis Communications', slug: 'what-we-do/crisis' },
-          ],
-        },
-        {
           label: 'Measurement',
           items: [
             { label: 'What to measure', slug: 'measurement/what-to-measure' },
             { label: 'How to ask questions', slug: 'measurement/questions' },
             { label: 'After-Action Reviews', slug: 'measurement/aars' },
             { label: 'MELA', slug: 'measurement/mela' },
+          ],
+        },
+        {
+          label: 'Templates',
+          items: [
+            { label: 'Templates', slug: 'templates/templates' },
           ],
         },
         {
