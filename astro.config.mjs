@@ -73,10 +73,10 @@ export default defineConfig({
         {
           label: 'Measurement',
           items: [
-            { label: 'What to measure', slug: 'measurement/evaluation' },
-            { label: 'How to ask questions', slug: 'measurement/evaluation' },
-            { label: 'After Action Reviews', slug: 'measurement/evaluation' },
-            { label: 'MELA', slug: 'measurement/evaluation' },
+            { label: 'What to measure', slug: 'measurement/what-to-measure' },
+            { label: 'How to ask questions', slug: 'measurement/questions' },
+            { label: 'After-Action Reviews', slug: 'measurement/aars' },
+            { label: 'MELA', slug: 'measurement/mela' },
           ],
         },
         {
