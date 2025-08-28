@@ -56,9 +56,9 @@ export default defineConfig({
           label: 'Creating Strategy',
           items: [
             { label: 'Creating a plan', slug: 'strategy/framework' },
-            { label: 'Audiences', slug: 'strategy/change' },
-            { label: 'Messaging', slug: 'strategy/cascading' },
-            { label: 'Channel & Tactics', slug: 'strategy/cascading' },
+            { label: 'Audiences', slug: 'strategy/audiences' },
+            { label: 'Messaging', slug: 'strategy/messaging' },
+            { label: 'Channel & Tactics', slug: 'strategy/channels' },
             { label: 'Cascading', slug: 'strategy/cascading' },
           ],
         },
