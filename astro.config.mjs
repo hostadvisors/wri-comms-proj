@@ -45,7 +45,6 @@ export default defineConfig({
           items: [
             { label: 'Tools & Guidelines', slug: 'what-we-do/tools' },
             { label: 'Crisis Communications', slug: 'what-we-do/crisis' },
-            { label: 'Toolkits & Resources', slug: 'what-we-do/toolkits' },
           ],
         },
         {
@@ -77,6 +76,7 @@ export default defineConfig({
         {
           label: 'Related Resources',
           items: [
+            { label: 'Toolkits', slug: 'related-resources/toolkits' },
             { label: 'Comms Resources', slug: 'related-resources/comms' },
             { label: 'WRI-Wide Resources', slug: 'related-resources/wri-wide' },
           ],
