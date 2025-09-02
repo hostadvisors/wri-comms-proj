@@ -35,7 +35,7 @@ export default defineConfig({
         {
           label: 'Who We Are',
           items: [
-            { label: 'Overview', slug: 'who-we-are/roles' },
+            { label: 'Overview', slug: 'who-we-are/overview' },
             { label: 'Roles and Responsibilities ', slug: 'who-we-are/structure' },
           ],
         },
