@@ -60,8 +60,7 @@ export default defineConfig({
           label: 'Measuring Impact',
           items: [
             { label: 'What to Measure', slug: 'measurement/what-to-measure' },
-            { label: 'After-Action Reviews', slug: 'measurement/aars' },
-            { label: 'MELA', slug: 'measurement/mela' },
+            { label: 'Monitoring, Evaluation, Learning', slug: 'measurement/mela' },
           ],
         },
         {
