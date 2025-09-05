@@ -33,48 +33,36 @@ export default defineConfig({
 
       sidebar: [
         {
-          label: 'Who We Are',
+          label: 'About Internal Comms',
           items: [
             { label: 'Overview', slug: 'who-we-are/overview' },
             { label: 'Roles and Responsibilities ', slug: 'who-we-are/structure' },
           ],
         },
         {
-          label: 'What We Do',
+          label: 'Comms Basics',
           items: [
-            { label: 'Transitions & Changes', slug: 'what-we-do/tools' },
-            { label: 'Crisis Communications', slug: 'what-we-do/crisis' },
+            { label: 'Channels & Methods', slug: 'basics/channels' },
+            { label: 'Tone and Voice Guidelines', slug: 'basics/tone-voice' },
+            { label: 'Templates', slug: 'basics/templates' },
           ],
         },
         {
-          label: 'Voice & Tone Guidelines',
+          label: 'Comms Guidance',
           items: [
-            { label: 'Guidelines', slug: 'voice-tone/guidelines' },
+            { label: 'Creating a Comms Plan', slug: 'strategy/framework' },
+            { label: 'Developing Successful Messaging', slug: 'strategy/messaging' },
+            { label: 'Cascading Framework', slug: 'strategy/cascading' },
+            { label: 'Communicating About Change', slug: 'strategy/change' },
+            { label: 'Crisis Communications', slug: 'strategy/crisis' },
           ],
         },
         {
-          label: 'Creating Strategy',
-          items: [
-            { label: 'Creating a Plan', slug: 'strategy/framework' },
-            { label: 'Audiences', slug: 'strategy/audiences' },
-            { label: 'Messaging', slug: 'strategy/messaging' },
-            { label: 'Channel & Tactics', slug: 'strategy/channels' },
-            { label: 'Cascading', slug: 'strategy/cascading' },
-          ],
-        },
-        {
-          label: 'Measurement',
+          label: 'Measuring Impact',
           items: [
             { label: 'What to Measure', slug: 'measurement/what-to-measure' },
-            { label: 'How to Ask Questions', slug: 'measurement/questions' },
             { label: 'After-Action Reviews', slug: 'measurement/aars' },
             { label: 'MELA', slug: 'measurement/mela' },
-          ],
-        },
-        {
-          label: 'Templates',
-          items: [
-            { label: 'Templates', slug: 'templates/templates' },
           ],
         },
         {
