@@ -1,143 +1,234 @@
 ---
 title: "Channels & Tactics"
-description: "Outline of our most-used communication channels"
+description: "A comprehensive guide to WRI's internal communication channels"
 ---
 
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Icon } from '@astrojs/starlight/components';
+
 # Quick Reference: Which Channel Should I Use?
-- Major Announcements & Launches
-    - Best channels: All-staff meetings + Banyan posts + Internal newsletters
-        - Use all three for maximum visibility and engagement
-        - Start with all-staff meeting for interactive discussion
-        - Follow up with Banyan post for ongoing reference
-        - Include in next newsletter for comprehensive coverage
 
-- Leadership Updates & Reflections
-    - Best channels: Email + Banyan posts
-        - Email for direct, personal communication
-        - Banyan for broader visibility and discussion
+<CardGrid stagger>
+  <Card title="Major Announcements & Launches" icon="rocket">
+    **Best Channel Combination:**
+    1. All-staff meetings
+    2. Banyan posts
+    3. Internal newsletters
+    
+    For maximum impact:
+    - Start with interactive all-staff discussion
+    - Follow up with detailed Banyan post
+    - Reinforce through newsletter coverage
+  </Card>
 
-- Strategy & Situational Updates
-    - Best channels: All-staff meetings + Email + Internal newsletters
-        - All-staff meetings for complex topics requiring discussion
-        - Email for urgent or time-sensitive updates, policy changes, or administrative matters
-        - Newsletters for regular, scheduled updates
+  <Card title="Leadership Updates" icon="list">
+    **Best Channel Combination:**
+    1. Email
+    2. Banyan posts
+    
+    Perfect for:
+    - Direct, personal communication
+    - Broader visibility and discussion
+    - Policy changes and strategic direction
+  </Card>
 
-- Celebrations & Milestones
-    - Best channels: All-staff meetings + Banyan posts + Internal newsletters
-        - New hires, achievements, holidays, team retreats
-        - Banyan posts work especially well for visual content and engagement
+  <Card title="Strategy Updates" icon="puzzle">
+    **Best Channel Combination:**
+    1. All-staff meetings
+    2. Email
+    3. Internal newsletters
+    
+    Ideal for:
+    - Complex topics needing discussion
+    - Time-sensitive updates
+    - Policy changes
+  </Card>
+
+  <Card title="Celebrations & Milestones" icon="star">
+    **Best Channel Combination:**
+    1. All-staff meetings
+    2. Banyan posts
+    3. Internal newsletters
+    
+    Perfect for:
+    - New hires and achievements
+    - Team retreats and events
+    - Visual content and engagement
+  </Card>
+</CardGrid>
 
 # Decision Tree: Choosing Your Channel
-- Is it urgent and requires immediate action? → Email
-- Does it need discussion or Q&A? → All-staff meeting (+ follow-up channels)
-- Is it a celebration or milestone? → Banyan post + Include in newsletter
-- Is it complex strategy or policy? → All-staff meeting + Email summary
-- Do you want ongoing engagement? → Banyan post
-- Is it a regular update? → Internal newsletter
-- Is it a major launch or achievement? → Use multiple channels for maximum impact
+
+<Card title="Quick Decision Guide">
+  <Tabs>
+    <TabItem label="Urgent Matters">
+       **Is it urgent?**
+      - Requires immediate action → Email
+      - Time-sensitive policy → Email + All-staff meeting
+    </TabItem>
+    <TabItem label="Interactive Content">
+       **Needs discussion?**
+      - Q&A sessions → All-staff meeting
+      - Team collaboration → Teams
+      - Ongoing dialogue → Banyan post
+    </TabItem>
+    <TabItem label="Regular Updates">
+      **Routine communication?**
+      - Weekly updates → Looking Ahead newsletter
+      - Monthly roundup → WRInsider
+      - Team achievements → Banyan + Newsletter
+    </TabItem>
+    <TabItem label="Major Events">
+       **Big announcements?**
+      - Product launches → All channels
+      - Strategic changes → All-staff + Email
+      - Milestones → Banyan + Newsletter
+    </TabItem>
+  </Tabs>
+</Card>
 
 
 # Channel Deep Dive
+
 ## Email
 
-Email is best used for for direct, documented communication that requires immediate attention or more formal record-keeping. Too many emails can get overwhelming or ignored, so use this tool strategically rather than as a catch-all.
+<Card title="Strategic Email Communication">
+  Email is best used for direct, documented communication that requires immediate attention or more formal record-keeping. Too many emails can get overwhelming or ignored, so use this tool strategically rather than as a catch-all.
 
-### When to use
-- Urgent or time-sensitive information
-- Leadership reflections and personal communications
-- Policy updates requiring immediate attention
-- Formal announcements
-
-### Best practices
-- Keep subject lines clear and actionable
-- Use bullet points for key information
-- Include clear next steps or deadlines
-- Consider timing for different time zones
+  <Tabs>
+    <TabItem label="When to Use">
+      - Urgent or time-sensitive information
+      - Leadership reflections and personal communications
+      - Policy updates requiring immediate attention
+      - Formal announcements
+    </TabItem>
+    <TabItem label="Best Practices">
+      - Keep subject lines clear and actionable
+      - Use bullet points for key information
+      - Include clear next steps or deadlines
+      - Consider timing for different time zones
+    </TabItem>
+  </Tabs>
+</Card>
 
 
 ## Microsoft Teams
 
-Teams works best for informal coordination and real-time collaboration, when your team needs to move fast together. As a more casual platform, avoid using Teams for formal or critical communication needing stakeholder input.
+<Card title="Real-Time Collaboration Platform">
+  Teams works best for informal coordination and real-time collaboration, when your team needs to move fast together. As a more casual platform, avoid using Teams for formal or critical communication needing stakeholder input.
 
-### When to use
-- Major product launches requiring immediate team coordination
-- Local DEI initiatives that need collaborative input
-- Project-specific updates within teams
-
-### Best practices
-- Use the provided Teams template
-- Pin important announcements
-- Use @mentions strategically
-- Follow up on action items
+  <Tabs>
+    <TabItem label="When to Use">
+      - Major product launches requiring immediate team coordination
+      - Local DEI initiatives that need collaborative input
+      - Project-specific updates within teams
+    </TabItem>
+    <TabItem label="Best Practices">
+      - Use the provided Teams template
+      - Pin important announcements
+      - Use @mentions strategically
+      - Follow up on action items
+    </TabItem>
+  </Tabs>
+</Card>
 
 
 ## All-Staff Meetings
 
-For major changes or delicate conversations, meetings provide meaningful face-to-face connection when engagement and dialoguen are key.
+<Card title="Face-to-Face Connection">
+  For major changes or delicate conversations, meetings provide meaningful face-to-face connection when engagement and dialogue are key.
 
-
-### When to use
-- Complex topics requiring discussion and Q&A
-- Strategy rollouts needing explanation
-- Building community and connection
-- Major organizational changes
-
-### Planning checklist
--  Schedule monthly or quarterly (minimum)
-- Reserve 60-90 minutes
-- Plan for in-person component when possible
-- Identify host (usually local CEO or director)
-- Finalize agenda 1-2 weeks in advance
-- Send invites early to reserve calendar space
-- Ideal structure: Opening → Main content → Housekeeping
+  <Tabs>
+    <TabItem label="Best Uses">
+      - Complex topics requiring discussion and Q&A
+      - Strategy rollouts needing explanation
+      - Building community and connection
+      - Major organizational changes
+    </TabItem>
+    <TabItem label="Planning Checklist">
+      - Schedule monthly or quarterly (minimum)
+      - Reserve 60-90 minutes
+      - Plan for in-person component when possible
+      - Identify host (usually local CEO or director)
+      - Finalize agenda 1-2 weeks in advance
+      - Send invites early to reserve calendar space
+    </TabItem>
+    <TabItem label="Meeting Structure">
+      1. Opening remarks and welcome
+      2. Main content presentation
+      3. Interactive Q&A session
+      4. Housekeeping and next steps
+    </TabItem>
+  </Tabs>
+</Card>
 
 
 ## Banyan Posts
 
-Banyan posts are best to encourage dialogue, foster a sense of community, and help bridge the digital and geographical gaps when uniting WRI as one.
+<Card title="Community Engagement Platform">
+  Banyan posts are best to encourage dialogue, foster a sense of community, and help bridge the digital and geographical gaps when uniting WRI as one.
 
-### When to use
-- Building ongoing conversations around topics
-- Sharing visual content (photos, infographics)
-- Encouraging staff engagement and comments
-- Creating searchable reference content
-
-### Best practices
-- Encourage staff to become content owners
-- Use rich media when possible
-- Ask engaging questions to prompt discussion
-- Regularly audit and update content
-- Cross-reference with Ed Board announcements when relevant
+  <Tabs>
+    <TabItem label="When to Use">
+      - Building ongoing conversations around topics
+      - Sharing visual content (photos, infographics)
+      - Encouraging staff engagement and comments
+      - Creating searchable reference content
+    </TabItem>
+    <TabItem label="Best Practices">
+      - Encourage staff to become content owners
+      - Use rich media when possible
+      - Ask engaging questions to prompt discussion
+      - Regularly audit and update content
+      - Cross-reference with Ed Board announcements
+    </TabItem>
+  </Tabs>
+</Card>
 
 
 ## Internal Newsletters
-
+<Card title="Reliable Updates">
 Regular newsletters provide a cadence of information for teams to rely on and are a great way to summarize comms initiatives, updates, or changes over a period of time.
 
-### Looking Ahead (Weekly)
-- Purpose: Institute-wide events and upcoming activities
-- Sent Sunday evenings ET
-- Informs Tuesday Management Team meetings
-- Input collected Tuesday-Friday each week
-- Use the Looking Ahead Input document
-
-### WRInsider (Monthly)
-- Purpose: Comprehensive institutional updates
-- Focus on actionable, staff-wide information
-- Keep entries succinct and relevant to all staff
-- Centralize related information on Banyan
-- Follow submission guidelines in monthly rollout doc
-
+<Tabs>
+    <TabItem label="Looking Ahead (Weekly)">
+      - Purpose: Institute-wide events and upcoming activities
+      - Sent Sunday evenings ET
+      - Informs Tuesday Management Team meetings
+      - Input collected Tuesday-Friday each week
+      - Use the Looking Ahead Input document
+    </TabItem>
+    <TabItem label="WRInsider (Monthly)">
+        - Purpose: Comprehensive institutional updates
+        - Focus on actionable, staff-wide information
+        - Keep entries succinct and relevant to all staff
+        - Centralize related information on Banyan
+        - Follow submission guidelines in monthly rollout doc
+    </TabItem>
+  </Tabs>
+</Card>
 
 # Tools & Resources
-## ContactMonkey
-- Our primary tool for staff emails and newsletters:
-- Integrated with Salesforce and Outlook
-- Email tracking and analytics
-- Unlimited licenses available
-- To get started: Contact the Global Internal Communications Team
 
+<CardGrid stagger>
+  <Card title="ContactMonkey" icon="document">
+    **Email Management Platform**
+    - Integrated with Salesforce and Outlook
+    - Email tracking and analytics
+    - Unlimited licenses available
+    - To get started: Contact Internal Comms Team
+  </Card>
 
-## Need Help?
-
-For questions about channel selection, templates, or accessing ContactMonkey, contact the Global Internal Communications Team at internal-comms@Wri.org.
+  <Card title="Need Help?" icon="question">
+    Contact the Global Internal Communications Team at:
+    
+    **internal-comms@wri.org**
+    
+    We can help with:
+    - Channel selection
+    - Templates and resources
+    - ContactMonkey access
+    - Best practices
+  </Card>
+</CardGrid>
