@@ -53,7 +53,6 @@ export default defineConfig({
             { label: 'Creating a Comms Plan', slug: 'strategy/framework' },
             { label: 'Developing Successful Messaging', slug: 'strategy/messaging' },
             { label: 'Cascading Framework', slug: 'strategy/cascading' },
-            { label: 'Communicating About Change', slug: 'strategy/change' },
             { label: 'Crisis Communications', slug: 'strategy/crisis' },
           ],
         },
