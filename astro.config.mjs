@@ -67,8 +67,7 @@ export default defineConfig({
           label: 'Related Resources',
           items: [
             { label: 'Toolkits', slug: 'related-resources/toolkits' },
-            { label: 'Comms Resources', slug: 'related-resources/comms' },
-            { label: 'WRI-Wide Resources', slug: 'related-resources/wri-wide' },
+            { label: 'Additional Resources', slug: 'related-resources/resources' },
           ],
         },
       ],
