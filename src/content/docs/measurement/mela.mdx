@@ -8,78 +8,53 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Icon } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-# WRI Internal Communications: MELA Framework
-
 <div class="sl-markdown-content">
   <Card title="What is MELA?" icon="information">
-    MELA stands for **Measurement, Evaluation, Learning, and Adaptation**—a simple framework for understanding whether your internal communications are working and how to improve them. This isn't about complex analytics or research studies; it's about building a habit of paying attention to results and making adjustments based on what you learn.
+    MELA stands for **Measurement, Evaluation, Learning, and Adaptation**. It's a simple framework for understanding whether an internal comms initiative is working and how to improve future work. Integrating MELA into your workflow builds a habit of paying attention to results and making adjustments based on what you learn.
   </Card>
 </div>
 
 ## Measurement: Track What Matters
 
-<Tabs>
-  <TabItem label="Basic Metrics">
-    <CardGrid stagger>
-      <Card title="Email Metrics" icon="document">
-        - Open rates
-        - Click rates
-        - Replies
-        Available in ContactMonkey
-      </Card>
-      <Card title="Meeting Analytics" icon="group">
-        - Attendance numbers
-        - Participation level
-      </Card>
-      <Card title="Newsletter Stats" icon="mail">
-        - Read rates
-        - Feedback volume
-      </Card>
-      <Card title="Banyan Engagement" icon="random">
-        - Views
-        - Comments
-        - Engagement metrics
-      </Card>
-    </CardGrid>
-  </TabItem>
-  <TabItem label="Best Practices">
-    <div class="sl-markdown-content">
-      <Card title="Focus on Trends" icon="chart">
-        Focus on trends rather than perfect benchmarks:
-        - Are more people opening your emails over time?
-        - Are meeting attendance rates consistent?
-        - Are you getting fewer basic questions about previously communicated topics?
+When deciding on a measurement framework, focus on trends rather than perfect benchmarks. These patterns tell you more than individual metrics. 
+- Are more people opening your emails over time?
+- Are meeting attendance rates consistent?
+- Are you getting fewer basic questions about previously communicated topics?
 
-        These patterns tell you more than individual metrics.
-      </Card>
-    </div>
-  </TabItem>
-  <TabItem label="Getting Started">
-    <Steps>
-      1. Choose 2-3 metrics that align with your communication goals
-      2. Determine what to track:
-         - For awareness: focus on reach and engagement
-         - For behavior change: look for action-based evidence
-      3. Set up a simple tracking system:
-         - Create a spreadsheet, or
-         - Use existing platform dashboards
-      4. Monitor metrics monthly
-    </Steps>
-  </TabItem>
-</Tabs>
+<CardGrid>
+  <Card title="Email Metrics" icon="document">
+    - Open rates
+    - Click rates
+    - Replies
+    Available in ContactMonkey
+  </Card>
+
+  <Card title="Meeting Analytics" icon="seti:default">
+    - Attendance numbers
+    - Participation level
+  </Card>
+
+  <Card title="Newsletter Stats" icon="seti:plan">
+    - Read rates
+    - Feedback volume
+  </Card>
+
+  <Card title="Banyan Engagement" icon="random">
+    - Views
+    - Comments
+    - Engagement metrics
+  </Card>
+  </CardGrid>
 
 ## Evaluation: Make Sense of What You're Seeing
 
-<div class="sl-markdown-content">
-  <Card title="Looking Beyond Numbers" icon="open-book">
-    The most valuable insights come from qualitative signals:
+
+    The most valuable insights come from qualitative signals, which can help shape numeric data and illuminate trends. In fact, these "soft" indicators often matter more than click-through rates.
+
     - Are people asking sophisticated follow-up questions?
     - Are they using communication concepts in meetings?
     - Are managers reporting improved team understanding?
     
-    These "soft" indicators often matter more than click-through rates.
-  </Card>
-</div>
 
 <CardGrid>
   <Card title="Monthly Check-In Questions" icon="list-format">
@@ -97,57 +72,40 @@ import { Steps } from '@astrojs/starlight/components';
 
 ## Learning: Turn Insights into Knowledge
 
-<Tabs>
-  <TabItem label="Success Documentation">
-    <div class="sl-markdown-content">
-      <Card title="Building Your Success Library" icon="star">
-        When communications succeed, document:
-        - Timing strategies
-        - Channel effectiveness
-        - Messaging approaches
-        - Format choices
-        
-        Create a reusable playbook of successful tactics.
-      </Card>
-    </div>
-  </TabItem>
-  <TabItem label="Learning from Challenges">
-    <Steps>
-      1. Identify what didn't work
-      2. Analyze potential causes:
-         - Message clarity
-         - Channel selection
-         - Timing decisions
-         - Audience alignment
-      3. Document lessons learned
-      4. Develop improvement strategies
-    </Steps>
-  </TabItem>
-  <TabItem label="Knowledge Sharing">
-    <div class="sl-markdown-content">
-      <Card title="Collaborative Learning" icon="people">
-        - Share insights with colleagues
-        - Connect with the Global Internal Communications Team
-        - Exchange regional best practices
-        - Learn from others' experiences
-        
-        Contact: internal-comms@wri.org
-      </Card>
-    </div>
-  </TabItem>
-</Tabs>
+To complete the feedback loop, document your successes as well as what didn't quite work as well. This can provide the foundation for a reusable playbook of successful tactics as well as Dos and Don'ts. Some items worth reflecting on include:
+    - Timing strategies
+    - Channel effectiveness
+    - Messaging approaches
+    - Format choices
+
+<CardGrid>
+  <Card title="Learning from Challenges" icon="warning">
+    1. Identify what didn't work
+    2. Analyze potential causes:
+       - Message clarity
+       - Channel selection
+       - Timing decisions
+       - Audience alignment
+    3. Document lessons learned
+    4. Develop improvement strategies
+  </Card>
+
+  <Card title="Knowledge Sharing" icon="comment">
+    - Share insights with colleagues
+    - Connect with the Global Internal Communications Team
+    - Exchange regional best practices
+    
+  </Card>
+</CardGrid>
 
 ## Adaptation: Improve Based on What You Learn
 
-<CardGrid stagger>
-  <Card title="Real-Time Adjustments" icon="refresh">
-    Monitor and adjust:
+Small changes can lead to significant improvements. Monitor and adjust:
     - Email engagement → Try different subject lines/timing
     - Meeting attendance → Modify format/schedule
     - Content effectiveness → Refine messaging approach
-    
-    Small changes can lead to significant improvements.
-  </Card>
+
+<CardGrid>
   
   <Card title="Continuous Improvement" icon="setting">
     - Build checkpoints into communication plans
@@ -170,69 +128,22 @@ import { Steps } from '@astrojs/starlight/components';
     Begin with low-risk communications for experiments. Once you find what works, apply these proven approaches to more important initiatives.
   </Card>
 </div>
-
-## Getting Started with MELA
-
-<Steps>
-  1. **Week 1: Set Up Basic Tracking**
-     - Choose 2-3 key metrics aligned with goals
-     - Set up monthly tracking system
-     - Begin collecting baseline data
-  
-  2. **Week 2: Create Feedback Channels**
-     - Add simple feedback questions to communications
-     - Example: "What questions do you have?"
-     - Set up feedback collection process
-  
-  3. **Week 3: Schedule Regular Review**
-     - Block 30 minutes monthly
-     - Review metrics and feedback
-     - Document observations
-     - Plan next improvements
-  
-  4. **Month 2 and Beyond: Build the Habit**
-     - Integrate MELA into communication planning
-     - Pre-plan success metrics
-     - Document lessons learned
-     - Continuously refine approach
-</Steps>
-
 ## Common MELA Mistakes to Avoid
 
 <CardGrid>
   <Card title="Over-measuring" icon="warning">
-    <Icon name="error" size="1.5rem" />
     Don't track every possible metric. Focus on a few key indicators that matter most to your goals.
   </Card>
   
-  <Card title="Ignoring Qualitative Data" icon="document">
-    <Icon name="error" size="1.5rem" />
-    Numbers tell only part of the story. Value conversations and observations as much as metrics.
+  <Card title="Ignoring Qualitative Data" icon="warning">
+    Numbers tell only part of the story. Value conversations and qualitative information as much as numerical metrics.
   </Card>
   
-  <Card title="Delayed Adjustments" icon="clock">
-    <Icon name="error" size="1.5rem" />
+  <Card title="Delayed Adjustments" icon="warning">
     Make continuous small improvements instead of waiting for formal evaluation periods.
   </Card>
   
-  <Card title="Working in Silos" icon="people">
-    <Icon name="error" size="1.5rem" />
+  <Card title="Working in Silos" icon="warning">
     Share your insights and learn from others' experiences to improve collective effectiveness.
   </Card>
 </CardGrid>
-
-## Getting Support
-
-<div class="sl-markdown-content">
-  <Card title="Need Help?" icon="support">
-    Contact the Global Internal Communications Team:
-    
-    📧 internal-comms@wri.org
-    
-    They can assist with:
-    - Choosing appropriate metrics
-    - Designing feedback systems
-    - Developing improvement strategies
-    - Interpreting results
-  </Card>
-</div>
