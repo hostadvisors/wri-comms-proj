@@ -111,11 +111,16 @@
     --sl-color-hairline-light: var(--wri-slate-100);
     --sl-color-hairline-shade: var(--wri-slate-300);
 
-    /* WCAG AA Compliant WRI brand accents - Gold backgrounds only */
-    --sl-color-accent-low: var(--wri-yellow-100);
-    --sl-color-accent: var(--wri-gold-bg); /* Exact WRI gold for backgrounds */
-    --sl-color-accent-high: var(--wri-gold-accessible); /* Darker gold when needed */
-    --sl-color-text-accent: var(--wri-link-light); /* Green links as per WRI website */
+    /* WCAG AA Compliant WRI brand accents - Gold backgrounds only (mapped to WRI tokens) */
+    --sl-color-accent-high: var(--wri-gold-700);
+    --sl-color-accent: var(--wri-gold-500);
+    --sl-color-accent-low: var(--wri-gold-100);
+    --sl-color-text-accent: var(--sl-color-accent);
+    --sl-color-text-invert: var(--sl-color-black);
+    --sl-color-bg-nav: var(--sl-color-gray-7);
+    --sl-color-bg-sidebar: var(--sl-color-bg);
+    --sl-color-bg-inline-code: var(--sl-color-gray-6);
+    --sl-color-bg-accent: var(--sl-color-accent);
 
     /* Semantic colors using WRI secondary palette */
     --sl-color-blue: var(--wri-blue);
@@ -142,6 +147,9 @@
     --sl-color-gray-5: var(--wri-slate-500);
     --sl-color-gray-6: var(--wri-slate-600);
 
+    /* Extended gray for layout backgrounds */
+    --sl-color-gray-7: var(--wri-slate-700);
+
     /* Focus ring - use WRI green to match links */
     --sl-color-focus: var(--wri-link-light);
     --wri-focus: rgba(0, 122, 77, 0.6); /* WRI green focus ring */
@@ -160,8 +168,8 @@
     --sl-color-hairline-shade: var(--wri-slate-600);
 
     /* Dark mode accents - maintain WRI brand with good contrast */
-    --sl-color-accent-low: color-mix(in srgb, var(--wri-yellow-500) 15%, var(--wri-slate-900));
-    --sl-color-accent: var(--wri-gold-bg); /* Keep WRI gold for backgrounds */
+  --sl-color-accent-low: color-mix(in srgb, var(--wri-gold-500) 15%, var(--wri-slate-900));
+  --sl-color-accent: var(--wri-gold-500); /* Keep WRI gold for backgrounds */
     --sl-color-accent-high: var(--wri-gold-accessible);
     --sl-color-text-accent: var(--wri-link-dark); /* Green links in dark mode */
 
@@ -304,11 +312,11 @@
   }
 
   .sl-link-button {
-    color: var(--sl-color-text) !important;
+    color: var(--sl-color-text);
     text-decoration: var(--wri-yellow-500);
   }
   .sl-link-button.primary {
-    color: var(--wri-yellow-950) !important;
+    color: var(--wri-yellow-950);
     text-decoration: var(--wri-yellow-500);
     background-color: var(--wri-yellow-500);
     border: var(--wri-yellow-500)
@@ -359,7 +367,7 @@
   /* Dark mode button adjustments */
   :root[data-theme="dark"] :where(button, .button, .btn, [role="button"]) {
     background: var(--sl-color-bg);
-    color: var(--sl-color-text) !important; /* Dark text on bright yellow */
+    color: var(--sl-color-text); /* Dark text on bright yellow */
     border-color: var(--wri-yellow-900);
   }
   
@@ -556,61 +564,71 @@
 
   /* Sidebar nav - Use gray text for normal links */
   .sidebar-content :where(a[aria-current="page"])  {
-    color: var(--sl-color-text) !important; /* Dark text for active link */
-    text-decoration: none !important;
-    background-color: var(--wri-yellow-500) !important; /* Light background for active link */
+  color: var(--sl-color-text); /* Dark text for active link */
+  text-decoration: none;
+  background-color: var(--wri-yellow-500); /* Light background for active link */
   }
+  /* Ensure active/current items use WRI gold accent and inverted text */
+  .sidebar-content a[aria-current="page"],
+  .sl-sidebar a[aria-current="page"],
+  :where([aria-current="page"]),
+  :where(a[aria-current="page"]) {
+    font-weight: 600;
+    color: var(--sl-color-text-invert);
+    background-color: var(--sl-color-accent); /* gold */
+  }
+
   .sidebar-content a{
     color: var(--sl-color-gray-3);
     text-decoration: underline var(--wri-link-light);
   }
   .sidebar-content a:hover{
-    color: var(--wri-link-light) !important;
-    text-decoration: underline var(--wri-link-light) !important;
+  color: var(--wri-link-light);
+  text-decoration: underline var(--wri-link-light);
   }
   :root[data-theme="dark"] .sidebar-content :where(a[aria-current="page"])  {
-    color: var(--sl-color-black) !important; /* Dark text for active link */
-    text-decoration: none !important;
-    background-color: var(--wri-yellow-600) !important; /* Light background for active link */
+  color: var(--sl-color-black); /* Dark text for active link */
+  text-decoration: none;
+  background-color: var(--wri-yellow-600); /* Light background for active link */
   }
   :root[data-theme="dark"] .sidebar-content a{
     color: var(--sl-color-gray-3);
     text-decoration: underline var(--sl-color-gray-3);
   }
   :root[data-theme="dark"] .sidebar-content a:hover {
-    color: var(--wri-yellow-800) !important;
-    text-decoration: underline var(--wri-yellow-800) !important;
+  color: var(--wri-yellow-800);
+  text-decoration: underline var(--wri-yellow-800);
   }
   .sl-sidebar :where(a) {
     border-radius: 6px;
     padding: 0.25rem 0.5rem;
     font-weight: var(--wri-font-weight-light);
-    color: var(--sl-color-gray-5) !important; /* Gray text for sidebar links */
+  color: var(--sl-color-gray-5); /* Gray text for sidebar links */
   }
   .sl-sidebar :where(li.is-active > a) {
-    background: var(--wri-gold-bg) !important;
-    color: var(--wri-slate-900) !important;
+  background: var(--wri-gold-bg);
+  color: var(--wri-slate-900);
     font-weight: var(--wri-font-weight-bold);
   }
   .sl-sidebar :where(a:hover) {
     background: color-mix(in oklab, var(--sl-color-accent-low) 60%, transparent);
     font-weight: var(--wri-font-weight-medium);
-    color: var(--sl-color-text) !important; /* Full text color on hover */
+  color: var(--sl-color-text); /* Full text color on hover */
   }
 
   /* TOC links - Right sidebar minimal changes */
   .sl-toc :where(a[aria-current="page"]) {
-    font-weight: var(--wri-font-weight-bold) !important; /* Bold for active TOC link */
+  font-weight: var(--wri-font-weight-bold); /* Bold for active TOC link */
   }
   .sl-toc :where(a:hover) {
-    color: white !important; /* White text on hover */
+  color: white; /* White text on hover */
   }
 
   /* Search input - Simple accessible styling */
   :where(input[type="search"], .DocSearch-Input) {
     border: 1px solid var(--sl-color-hairline);
     background: var(--sl-color-bg);
-    color: var(--sl-color-text) !important; /* Black text in light mode */
+  color: var(--sl-color-text); /* Black text in light mode */
     border-radius: 6px;
     padding: 0.5rem 0.75rem;
   }
@@ -623,7 +641,7 @@
 
   /* Dark mode search text - white text */
   :root[data-theme="dark"] :where(input[type="search"], .DocSearch-Input) {
-    color: var(--sl-color-text) !important; /* White text in dark mode */
+  color: var(--sl-color-text); /* White text in dark mode */
     background: var(--sl-color-bg);
     border-color: var(--sl-color-hairline);
   }
@@ -705,7 +723,7 @@
   nav[aria-labelledby] a,
   aside nav a,
   .starlight-aside nav a {
-    color: var(--sl-color-gray-4) !important; /* Gray text for all sidebar links */
+  color: var(--sl-color-gray-4); /* Gray text for all sidebar links */
     text-decoration: none;
   }
 
@@ -715,7 +733,7 @@
   nav[aria-labelledby] a:hover,
   aside nav a:hover,
   .starlight-aside nav a:hover {
-    color: var(--sl-color-text) !important; /* Full text color on hover */
+  color: var(--sl-color-text); /* Full text color on hover */
   }
 
   /* Active/Current Page Links - Gold highlight */
@@ -731,9 +749,9 @@
   nav[aria-labelledby] a[aria-current]:not([aria-current="false"]),
   aside nav a[aria-current]:not([aria-current="false"]),
   .starlight-aside nav a[aria-current]:not([aria-current="false"]) {
-    color: var(--wri-slate-900) !important; /* Dark text for contrast */
-    font-weight: var(--wri-font-weight-medium) !important;
-    border-radius: 6px !important;
+  color: var(--wri-slate-900); /* Dark text for contrast */
+  font-weight: var(--wri-font-weight-medium);
+  border-radius: 6px;
   }
 
   .sl-sidebar a[aria-current="page"]:hover,
@@ -742,36 +760,36 @@
   nav[aria-labelledby] a[aria-current="page"]:hover,
   aside nav a[aria-current="page"]:hover,
   .starlight-aside nav a[aria-current="page"]:hover {
-    color: var(--wri-slate-900) !important;
+  color: var(--wri-slate-900);
   }
 
   /* Search Component - Simple theme, no jumping */
   .sl-search button,
   .search-dialog button {
-    border: 1px solid var(--wri-gold-bg) !important;
-    background: transparent !important;
-    color: var(--wri-gold-bg) !important;
+    border: 1px solid var(--wri-gold-bg);
+    background: transparent;
+    color: var(--wri-gold-bg);
   }
 
   .sl-search button:hover,
   .search-dialog button:hover {
-    background: var(--wri-gold-bg) !important;
-    color: white !important;
+    background: var(--wri-gold-bg);
+    color: white;
   }
 
   /* Ensure cmd+k is visible */
   .sl-search button kbd,
   .search-dialog kbd {
-    background: var(--sl-color-bg-inline-code) !important;
-    color: var(--sl-color-text) !important;
-    border: 1px solid var(--sl-color-hairline) !important;
-    padding: 0.125em 0.25em !important;
-    border-radius: 3px !important;
-    font-size: 0.75em !important;
+  background: var(--sl-color-bg-inline-code);
+  color: var(--sl-color-text);
+  border: 1px solid var(--sl-color-hairline);
+  padding: 0.125em 0.25em;
+  border-radius: 3px;
+  font-size: 0.75em;
   }
 
   .pagination-links a {
-    color: var(--sl-color-text) !important;
+  color: var(--sl-color-text);
     text-decoration: none;
   }
   .pagination-links a .link-title {
@@ -788,7 +806,7 @@
   :root[data-theme="dark"] nav[aria-labelledby] a,
   :root[data-theme="dark"] aside nav a,
   :root[data-theme="dark"] .starlight-aside nav a {
-    color: var(--sl-color-gray-4) !important; /* Gray text for sidebar in dark mode */
+  color: var(--sl-color-gray-4); /* Gray text for sidebar in dark mode */
   }
 
   :root[data-theme="dark"] .sl-sidebar a:hover,
@@ -797,7 +815,7 @@
   :root[data-theme="dark"] nav[aria-labelledby] a:hover,
   :root[data-theme="dark"] aside nav a:hover,
   :root[data-theme="dark"] .starlight-aside nav a:hover {
-    color: var(--sl-color-text) !important;
+  color: var(--sl-color-text);
   }
 
   /* Dark mode active sidebar links */
@@ -807,8 +825,8 @@
   :root[data-theme="dark"] nav[aria-labelledby] a[aria-current="page"],
   :root[data-theme="dark"] aside nav a[aria-current="page"],
   :root[data-theme="dark"] .starlight-aside nav a[aria-current="page"] {
-    color: var(--wri-slate-900) !important; /* Dark text on yellow background */
-    background-color: var(--wri-gold-bg) !important; /* Full yellow background in dark mode */
+  color: var(--wri-slate-900); /* Dark text on yellow background */
+  background-color: var(--wri-gold-bg); /* Full yellow background in dark mode */
   }
 
   :root[data-theme="dark"] .sl-sidebar a[aria-current="page"]:hover,
@@ -817,47 +835,47 @@
   :root[data-theme="dark"] nav[aria-labelledby] a[aria-current="page"]:hover,
   :root[data-theme="dark"] aside nav a[aria-current="page"]:hover,
   :root[data-theme="dark"] .starlight-aside nav a[aria-current="page"]:hover {
-    background-color: var(--wri-gold-bg) !important;
-    color: var(--wri-slate-900) !important;
+  background-color: var(--wri-gold-bg);
+  color: var(--wri-slate-900);
   }
 
   /* Dark mode TOC (right sidebar) minimal changes */
   :root[data-theme="dark"] .sl-toc :where(a[aria-current="page"]) {
-    font-weight: var(--wri-font-weight-bold) !important; /* Bold for active TOC link */
+  font-weight: var(--wri-font-weight-bold); /* Bold for active TOC link */
   }
   :root[data-theme="dark"] .sl-toc :where(a:hover) {
-    color: white !important; /* White text on hover */
+  color: white; /* White text on hover */
   }
 
   /* Keep main navigation green - exclude sidebar selectors */
   .sl-nav a,
   header nav a {
-    color: var(--wri-link-light) !important;
+  color: var(--wri-link-light);
     text-decoration: none;
   }
 
   .sl-nav a:hover,
   header nav a:hover {
-    color: var(--wri-link-hover-light) !important;
+  color: var(--wri-link-hover-light);
   }
 
   :root[data-theme="dark"] .sl-nav a,
   :root[data-theme="dark"] header nav a {
-    color: var(--wri-link-dark) !important;
+  color: var(--wri-link-dark);
   }
 
   :root[data-theme="dark"] .sl-nav a:hover,
   :root[data-theme="dark"] header nav a:hover {
-    color: var(--wri-link-hover-dark) !important;
+  color: var(--wri-link-hover-dark);
   }
 
   /* Fallback for any remaining Starlight default colors */
   [class*="astro-"] {
-    --sl-color-text-accent: var(--wri-link-light) !important;
+  --sl-color-text-accent: var(--sl-color-accent);
   }
 
   :root[data-theme="dark"] [class*="astro-"] {
-    --sl-color-text-accent: var(--wri-link-dark) !important;
+  --sl-color-text-accent: var(--sl-color-accent);
   }
 }
 

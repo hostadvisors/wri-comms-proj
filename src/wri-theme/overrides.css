@@ -70,7 +70,7 @@
     border-radius: 6px;
     padding: 0.25rem 0.5rem;
     font-weight: var(--wri-font-weight-light);
-    color: var(--sl-color-gray-4) !important; /* Better legibility in light mode */
+  color: var(--sl-color-gray-4); /* Better legibility in light mode */
     text-decoration: none;
     transition: all 0.2s ease;
   }
@@ -83,8 +83,8 @@
   nav[aria-labelledby] a:hover,
   aside nav a:hover,
   .starlight-aside nav a:hover {
-    color: var(--sl-color-text) !important; /* Full text color on hover */
-    background: color-mix(in oklab, var(--wri-yellow) 40%, transparent);
+  color: var(--sl-color-text); /* Full text color on hover */
+  background: color-mix(in oklab, var(--wri-gold) 40%, transparent);
     font-weight: var(--wri-font-weight-medium);
   }
 
@@ -103,9 +103,9 @@
   nav[aria-labelledby] a[aria-current]:not([aria-current="false"]),
   aside nav a[aria-current]:not([aria-current="false"]),
   .starlight-aside nav a[aria-current]:not([aria-current="false"]) {
-    color: var(--wri-slate-900) !important; /* Dark text for contrast */
-    font-weight: var(--wri-font-weight-medium) !important;
-    border-radius: 6px !important;
+  color: var(--wri-slate-900); /* Dark text for contrast */
+  font-weight: var(--wri-font-weight-medium);
+  border-radius: 6px;
   }
 
   .sidebar-content a[aria-current="page"]:hover,
@@ -116,7 +116,7 @@
   aside nav a[aria-current="page"]:hover,
   .starlight-aside nav a[aria-current="page"]:hover,
   .sl-sidebar li.is-active > a:hover {
-    color: var(--wri-slate-900) !important;
+  color: var(--wri-slate-900);
   }
 
   /* Dark mode sidebar adjustments - improved visibility */
@@ -127,7 +127,7 @@
   :root[data-theme="dark"] nav[aria-labelledby] a,
   :root[data-theme="dark"] aside nav a,
   :root[data-theme="dark"] .starlight-aside nav a {
-    color: var(--sl-color-gray-2) !important; /* Much brighter for better readability */
+  color: var(--sl-color-gray-2); /* Much brighter for better readability */
   }
 
   :root[data-theme="dark"] .sidebar-content a:hover,
@@ -137,8 +137,8 @@
   :root[data-theme="dark"] nav[aria-labelledby] a:hover,
   :root[data-theme="dark"] aside nav a:hover,
   :root[data-theme="dark"] .starlight-aside nav a:hover {
-    background: color-mix(in oklab, var(--sl-color-accent-low) 40%, transparent);
-    color: var(--sl-color-text) !important;
+  background: color-mix(in oklab, var(--sl-color-accent-low) 40%, transparent);
+  color: var(--sl-color-text);
   }
 
   /* Dark mode active sidebar links */
@@ -150,8 +150,8 @@
   :root[data-theme="dark"] aside nav a[aria-current="page"],
   :root[data-theme="dark"] .starlight-aside nav a[aria-current="page"],
   :root[data-theme="dark"] .sl-sidebar li.is-active > a {
-    background: var(--wri-gold-bg) !important;
-    color: var(--wri-slate-900) !important; /* Dark text on yellow background */
+  background: var(--wri-gold-500);
+  color: var(--wri-slate-900); /* Dark text on yellow background */
   }
 
   :root[data-theme="dark"] .sidebar-content a[aria-current="page"]:hover,
@@ -162,8 +162,8 @@
   :root[data-theme="dark"] aside nav a[aria-current="page"]:hover,
   :root[data-theme="dark"] .starlight-aside nav a[aria-current="page"]:hover,
   :root[data-theme="dark"] .sl-sidebar li.is-active > a:hover {
-    background: var(--wri-gold-accessible) !important;
-    color: var(--wri-slate-900) !important;
+  background: var(--wri-gold-accessible);
+  color: var(--wri-slate-900);
   }
 
   /* =====================================================================
@@ -177,30 +177,30 @@
 
   /* TOC links - active page styling */
   .sl-toc a[aria-current="page"] {
-    font-weight: var(--wri-font-weight-bold) !important;
-    background: var(--wri-gold-bg) !important;
-    color: var(--wri-slate-700) !important;
+  font-weight: var(--wri-font-weight-bold);
+  background: var(--wri-gold-500);
+  color: var(--wri-slate-700);
     border-radius: 4px;
     padding: 0.125rem 0.25rem;
   }
   
   .sl-toc a:hover {
-    color: var(--sl-color-text-accent) !important;
+  color: var(--sl-color-text-accent);
   }
 
   /* Dark mode TOC - improved visibility */
   :root[data-theme="dark"] .sl-toc a {
-    color: var(--sl-color-gray-2) !important; /* Much brighter for better readability */
+  color: var(--sl-color-gray-2); /* Much brighter for better readability */
   }
 
   :root[data-theme="dark"] .sl-toc a[aria-current="page"] {
-    font-weight: var(--wri-font-weight-bold) !important;
-    background: var(--wri-gold-bg) !important;
-    color: var(--wri-slate-900) !important; /* Dark text on yellow background */
+  font-weight: var(--wri-font-weight-bold);
+  background: var(--wri-gold-500);
+  color: var(--wri-slate-900); /* Dark text on yellow background */
   }
   
   :root[data-theme="dark"] .sl-toc a:hover {
-    color: var(--wri-link-dark) !important;
+  color: var(--wri-link-dark);
   }
 
   /* =====================================================================
@@ -219,7 +219,7 @@
 
   .sl-search button:hover,
   .search-dialog button:hover {
-    border-color: var(--wri-gold-bg);
+  border-color: var(--wri-gold-500);
   }
 
   /* Ensure cmd+k shortcut is visible */
@@ -237,27 +237,27 @@
      Starlight Link Buttons and CTAs
      ===================================================================== */
   .sl-link-button {
-    color: var(--sl-color-text) !important;
+  color: var(--sl-color-text);
     text-decoration: none;
     border-radius: 6px;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
   }
   .sl-link-button.primary {
-    color: var(--wri-yellow-950) !important;
-    background-color: var(--wri-yellow-500);
-    border: 1px solid var(--wri-yellow-500);
+  color: var(--wri-gold-950);
+  background-color: var(--wri-gold-500);
+  border: 1px solid var(--wri-gold-500);
   }
   .sl-link-button.primary:hover {
-    background-color: var(--wri-yellow-700);
-    border-color: var(--wri-yellow-700);
+  background-color: var(--wri-gold-700);
+  border-color: var(--wri-gold-700);
   }
 
   /* =====================================================================
      Pagination Links
      ===================================================================== */
   .pagination-links a {
-    color: var(--sl-color-text) !important;
+  color: var(--sl-color-text);
     text-decoration: none;
     border: 1px solid var(--sl-color-hairline);
     border-radius: 8px;
@@ -267,17 +267,17 @@
   }
 
   .pagination-links a:hover {
-    border-color: var(--wri-gold-bg);
-    background: color-mix(in srgb, var(--wri-gold-bg) 5%, var(--sl-color-bg));
+  border-color: var(--wri-gold-500);
+  background: color-mix(in srgb, var(--wri-gold-500) 5%, var(--sl-color-bg));
   }
 
   .pagination-links a .link-title {
-    color: var(--wri-yellow);
+  color: var(--wri-gold);
     font-weight: var(--wri-font-weight-medium);
   }
 
   :root[data-theme="dark"] .pagination-links a .link-title {
-    color: var(--wri-yellow-800);
+  color: var(--wri-gold-800);
   }
 
   /* =====================================================================
@@ -347,7 +347,7 @@
      ===================================================================== */
   .sl-badge,
   .badge {
-    background: var(--wri-gold-bg);
+  background: var(--wri-gold-500);
     color: var(--wri-slate-900);
     padding: 0.125rem 0.5rem;
     border-radius: 1rem;

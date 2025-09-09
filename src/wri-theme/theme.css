@@ -54,6 +54,21 @@
     --wri-yellow-900: #664400;
     --wri-yellow-950: #332200;
 
+   /* Canonical gold token family (preferred names) - map to existing yellow palette */
+   --wri-gold: var(--wri-yellow-500);
+   --wri-gold-50: var(--wri-yellow-50);
+   --wri-gold-100: var(--wri-yellow-100);
+   --wri-gold-200: var(--wri-yellow-200);
+   --wri-gold-300: var(--wri-yellow-300);
+   --wri-gold-400: var(--wri-yellow-400);
+   --wri-gold-500: var(--wri-yellow-500);
+   --wri-gold-600: var(--wri-yellow-600);
+   --wri-gold-700: var(--wri-yellow-700);
+   --wri-gold-800: var(--wri-yellow-800);
+   --wri-gold-900: var(--wri-yellow-900);
+   --wri-gold-950: var(--wri-yellow-950);
+
+
     /* =====================================================================
        Neutral System (refined for docs legibility)
        ===================================================================== */
@@ -81,7 +96,8 @@
     /* =====================================================================
        WRI Gold - EXACT brand color for backgrounds
        ===================================================================== */
-    --wri-gold-bg: #F0AB00; /* Official WRI gold */
+   /* legacy alias kept for compatibility; prefer --wri-gold and --wri-gold-500 */
+   --wri-gold-bg: var(--wri-gold);
     --wri-gold-accessible: #D99900; /* Darker for text when needed */
 
     /* =====================================================================
@@ -114,7 +130,25 @@
     --sl-color-accent-low: var(--wri-yellow-100);
     --sl-color-accent: var(--wri-gold-bg);
     --sl-color-accent-high: var(--wri-gold-accessible);
-    --sl-color-text-accent: var(--wri-link-light);
+    --sl-color-text-accent: var(--wri-gold-accessible);
+
+    /* Ensure Starlight-generated CSS (scoped with astro- classes) resolves to WRI gold
+       Some framework rules are emitted into compiled CSS with lower specificity; setting
+       these variables on the astro-scoped container guarantees the accent maps to gold. */
+    [class*="astro-"] {
+      --sl-color-accent-low: var(--wri-gold-100);
+      --sl-color-accent: var(--wri-gold-500);
+      --sl-color-accent-high: var(--wri-gold-accessible);
+      --sl-color-text-accent: var(--wri-gold-accessible);
+    }
+
+    /* Dark theme astro-scoped override */
+    :root[data-theme="dark"] [class*="astro-"] {
+      --sl-color-accent-low: color-mix(in srgb, var(--wri-gold-500) 15%, var(--wri-slate-900));
+      --sl-color-accent: var(--wri-gold-500);
+      --sl-color-accent-high: var(--wri-gold-accessible);
+      --sl-color-text-accent: var(--wri-link-dark);
+    }
 
     /* Semantic colors using WRI secondary palette */
     --sl-color-blue: var(--wri-blue);

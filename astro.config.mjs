@@ -20,10 +20,6 @@ export default defineConfig({
         './src/wri-theme/wri-theme.css',
       ],
 
-      components: {
-        Header: './src/wri-theme/overrides/Header.astro',
-      },
-
       sidebar: [
         {
           label: 'About Internal Comms',
