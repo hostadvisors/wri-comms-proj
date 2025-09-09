@@ -5,12 +5,6 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Redirect all requests to index.html for SPA routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 # Headers for security and performance
 [[headers]]
   for = "/*"
@@ -36,14 +30,3 @@
   for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000"
-
-# Environment-specific redirects for the custom domain
-[context.production]
-  environment = { NODE_ENV = "production" }
-
-# Preview deployments
-[context.deploy-preview]
-  command = "npm run build"
-
-[context.branch-deploy]
-  command = "npm run build"

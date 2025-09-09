@@ -1,20 +1,13 @@
 // astro.config.ts
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  output: 'server',
-  // Only use Netlify adapter in production
-  adapter: process.env.NODE_ENV === 'production' ? netlify() : undefined,
-
   integrations: [
     starlight({
       title: '',
       description:
         'Documentation themed for the World Resources Institute using Astro Starlight.',
-      // Disable prerendering for all Starlight pages
-      prerender: false,
 	  logo: {
 		light: './src/wri-theme/assets/logo-light.svg',
 		dark: './src/wri-theme/assets/logo-dark.svg',
