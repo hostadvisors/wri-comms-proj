@@ -130,7 +130,7 @@
     --sl-color-accent-low: var(--wri-yellow-100);
     --sl-color-accent: var(--wri-gold-bg);
     --sl-color-accent-high: var(--wri-gold-accessible);
-    --sl-color-text-accent: var(--wri-gold-accessible);
+    --sl-color-text-accent: var(--wri-gold);
 
     /* Ensure Starlight-generated CSS (scoped with astro- classes) resolves to WRI gold
        Some framework rules are emitted into compiled CSS with lower specificity; setting
@@ -139,7 +139,7 @@
       --sl-color-accent-low: var(--wri-gold-100);
       --sl-color-accent: var(--wri-gold-500);
       --sl-color-accent-high: var(--wri-gold-accessible);
-      --sl-color-text-accent: var(--wri-gold-accessible);
+      --sl-color-text-accent: var(--wri-gold);
     }
 
     /* Dark theme astro-scoped override */
@@ -147,7 +147,7 @@
       --sl-color-accent-low: color-mix(in srgb, var(--wri-gold-500) 15%, var(--wri-slate-900));
       --sl-color-accent: var(--wri-gold-500);
       --sl-color-accent-high: var(--wri-gold-accessible);
-      --sl-color-text-accent: var(--wri-link-dark);
+      --sl-color-text-accent: var(--wri-gold);
     }
 
     /* Semantic colors using WRI secondary palette */
