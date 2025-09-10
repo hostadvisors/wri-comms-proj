@@ -9,13 +9,13 @@ As WRI's Internal Comms Network, we work together cross-functionally to ensure t
 
 - **Our approach:** We do this by reinforcing strategic priorities, supporting change initiatives, clarifying policies, reflecting and strengthening culture, and highlighting our collective impact. For more info, see Target 5 in [Comms 5-Year Strategy](https://onewri.sharepoint.com/:w:/s/Banyan2/Strategy/EdAiqWIN_HZGkxJUqb3RytkBFPv7exwEcf2tUrUTi1PuCQ?e=HmwpDA)
 
-## Members of our network
+## Our Network
 
 We're made up of a **global** team as well as **regional**, **country**, and **program** staff working together toward a common goal. These teams include defined Internal Comms roles as well as other staff who may have different primary functions, but still have internal comms responsibilities in their work.
 
 Our work at the global, local, and program levels approaches the same goal, but from different angles. 
 
-### Global Internal Comms team
+### Global Internal Comms Team
 As the center point of the global network for Internal Comms, we work in sync with country, regional, and program teams and staff to distill important messaging and ensure strategies work in practice for each context.
 
 | Function | Goal |
@@ -33,7 +33,7 @@ As the center point of the global network for Internal Comms, we work in sync wi
 - [Lauren Zelin](mailto:lauren.zelin@wri.org), Director of Communications and Engagement for the President’s Office
 - [Srikant Mahanty](Srikant.Mahanty@wri.org), Senior Manager of Global Communications
 
-### **Country, regional, and Program internal comms teams**
+### **Country, regional, and Program Teams**
 
 Each country or regional office, and each Program at a global level, shapes internal comms for their respective local or programmatic audience. This includes not only addressing team-specific needs not met by broader global comms, but also contextualizing information and change for local team needs. 
 
