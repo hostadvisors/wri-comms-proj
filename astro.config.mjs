@@ -29,20 +29,20 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Comms Basics',
-          items: [
-            { label: 'Channels & Methods', slug: 'basics/channels' },
-            { label: 'Tone and Voice Guidelines', slug: 'basics/tone-voice' },
-            { label: 'Templates', slug: 'basics/templates' },
-          ],
-        },
-        {
           label: 'Comms Guidance',
           items: [
             { label: 'Creating a Comms Plan', slug: 'strategy/framework' },
             { label: 'Developing Successful Messaging', slug: 'strategy/messaging' },
             { label: 'Cascading Framework', slug: 'strategy/cascading' },
             { label: 'Crisis Communications', slug: 'strategy/crisis' },
+          ],
+        },
+        {
+          label: 'Implementing Comms',
+          items: [
+            { label: 'Channels & Methods', slug: 'implement/channels' },
+            { label: 'Tone and Voice Guidelines', slug: 'implement/tone-voice' },
+            { label: 'Templates', slug: 'implement/templates' },
           ],
         },
         {
