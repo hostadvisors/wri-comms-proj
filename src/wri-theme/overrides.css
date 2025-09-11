@@ -248,6 +248,9 @@
   background-color: var(--wri-gold-500);
   border: 1px solid var(--wri-gold-500);
   }
+  :root[data-theme="dark"] .sl-link-button.primary {
+  color: var(--wri-gold-950) !important;
+  }
   .sl-link-button.primary:hover {
   background-color: var(--wri-gold-700);
   border-color: var(--wri-gold-700);
@@ -390,6 +393,32 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin: 1rem 0;
+  }
+
+  /* =====================================================================
+     Tablist Component Styling - White links, no underlines
+     ===================================================================== */
+  .tablist-wrapper[role="tablist"] a,
+  .tablist-wrapper ul[role="tablist"] a,
+  [class*="astro-"] .tablist-wrapper a,
+  [class*="astro-"] ul[role="tablist"] a,
+  ul[role="tablist"] a[role="tab"],
+  .tab a[role="tab"] {
+    color: var(--sl-color-text) !important;
+    font-weight: 500;
+    text-decoration: none !important;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  /* Dark mode tablist - lighter text color */
+  :root[data-theme="dark"] .tablist-wrapper[role="tablist"] a,
+  :root[data-theme="dark"] .tablist-wrapper ul[role="tablist"] a,
+  :root[data-theme="dark"] [class*="astro-"] .tablist-wrapper a,
+  :root[data-theme="dark"] [class*="astro-"] ul[role="tablist"] a,
+  :root[data-theme="dark"] ul[role="tablist"] a[role="tab"],
+  :root[data-theme="dark"] .tab a[role="tab"] {
+    color: var(--sl-color-gray-2) !important;
+    text-decoration: none !important;
   }
 
   /* =====================================================================

@@ -117,7 +117,7 @@
     --sl-color-white: #FFFFFF;
     --sl-color-black: var(--wri-slate-900);
     --sl-color-text: var(--wri-slate-900);
-    --sl-color-text-invert: var(--wri-slate-50);
+    --sl-color-text-invert: var(--sl-color-bg);
     --sl-color-bg: #FFFFFF;
     --sl-color-bg-nav: #FFFFFF;
     --sl-color-bg-sidebar: var(--wri-slate-50);
@@ -183,7 +183,7 @@
      Dark Theme Color Mappings - WCAG Compliant
      ===================================================================== */
   :root[data-theme="dark"] {
-    --sl-color-text: var(--wri-slate-100);
+    --sl-color-text: #FFFFFF;
     --sl-color-text-invert: var(--wri-slate-900);
     --sl-color-bg: var(--wri-slate-950);
     --sl-color-bg-nav: var(--wri-slate-950);
