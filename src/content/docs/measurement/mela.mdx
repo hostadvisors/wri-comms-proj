@@ -3,147 +3,204 @@ title: MELA Framework Guide
 description: A practical guide to Measurement, Evaluation, Learning & Adaptation for internal communications effectiveness
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
-import { Icon } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 
-<div class="sl-markdown-content">
-  <Card title="What is MELA?" icon="information">
-    MELA stands for **Measurement, Evaluation, Learning, and Adaptation**. It's a simple framework for understanding whether an internal comms initiative is working and how to improve future work. Integrating MELA into your workflow builds a habit of paying attention to results and making adjustments based on what you learn.
-  </Card>
-</div>
+<Aside type="note" title="What is MELA?">
+MELA stands for **Measurement, Evaluation, Learning, and Adaptation**. It's a simple framework for understanding whether an internal comms initiative is working and how to improve future work. Integrating MELA into your workflow builds a habit of paying attention to results and making adjustments based on what you learn.
+</Aside>
 
-## Measurement: Track What Matters
+<Steps>
 
-When deciding on a measurement framework, focus on trends rather than perfect benchmarks. These patterns tell you more than individual metrics. 
-- Are more people opening your emails over time?
-- Are meeting attendance rates consistent?
-- Are you getting fewer basic questions about previously communicated topics?
+1. **Measurement: Track What Matters**
 
-<CardGrid>
-  <Card title="Email Metrics" icon="document">
-    - Open rates
-    - Click rates
-    - Replies
-    Available in ContactMonkey
-  </Card>
+   When deciding on a measurement framework, focus on trends rather than perfect benchmarks. These patterns tell you more than individual metrics.
 
-  <Card title="Meeting Analytics" icon="seti:default">
-    - Attendance numbers
-    - Participation level
-  </Card>
+   <Aside type="tip" title="Key Questions to Ask">
+   - Are more people opening your emails over time?
+   - Are meeting attendance rates consistent?
+   - Are you getting fewer basic questions about previously communicated topics?
+   </Aside>
 
-  <Card title="Newsletter Stats" icon="seti:plan">
-    - Read rates
-    - Feedback volume
-  </Card>
+   <Tabs>
+   <TabItem label="Digital Metrics">
+   **Email Analytics (ContactMonkey)**
+   - Open rates and trends
+   - Click-through rates
+   - Reply engagement
+   - Forward/share activity
 
-  <Card title="Banyan Engagement" icon="random">
-    - Views
-    - Comments
-    - Engagement metrics
-  </Card>
-  </CardGrid>
+   **Newsletter Performance**
+   - Read completion rates
+   - Feedback volume and quality
+   - Subscription growth/retention
+   </TabItem>
+   <TabItem label="Engagement Metrics">
+   **Meeting Analytics**
+   - Attendance numbers and consistency
+   - Participation levels during sessions
+   - Quality of questions and discussions
 
-## Evaluation: Make Sense of What You're Seeing
+   **Banyan Platform Engagement**
+   - Content views and reach
+   - Comments and reactions
+   - Discussion thread participation
+   </TabItem>
+   </Tabs>
 
+2. **Evaluation: Make Sense of What You're Seeing**
 
-    The most valuable insights come from qualitative signals, which can help shape numeric data and illuminate trends. In fact, these "soft" indicators often matter more than click-through rates.
+   The most valuable insights come from qualitative signals, which can help shape numeric data and illuminate trends. In fact, these "soft" indicators often matter more than click-through rates.
 
-    - Are people asking sophisticated follow-up questions?
-    - Are they using communication concepts in meetings?
-    - Are managers reporting improved team understanding?
-    
+   <Aside type="caution" title="Qualitative Indicators to Watch">
+   - Are people asking sophisticated follow-up questions?
+   - Are they using communication concepts in meetings?
+   - Are managers reporting improved team understanding?
+   </Aside>
 
-<CardGrid>
-  <Card title="Monthly Check-In Questions" icon="list-format">
-    - What communication received the best response and why?
-    - What generated confusion or pushback?
-    - What feedback are you hearing in informal settings?
-    - What would you do differently next time?
-  </Card>
-  <Card title="Feedback Collection Methods" icon="puzzle">
-    - Add quick feedback questions to communications
-    - Leverage existing channels (surveys, town halls)
-    - Conduct informal stakeholder follow-ups
-  </Card>
-</CardGrid>
+   <Tabs>
+   <TabItem label="Regular Check-ins">
+   **Monthly Evaluation Questions**
+   - What communication received the best response and why?
+   - What generated confusion or pushback?
+   - What feedback are you hearing in informal settings?
+   - What would you do differently next time?
+   </TabItem>
+   <TabItem label="Feedback Collection">
+   **Systematic Feedback Methods**
+   - Add quick feedback questions to communications
+   - Leverage existing channels (surveys, town halls)
+   - Conduct informal stakeholder follow-ups
+   - Monitor unsolicited feedback and conversations
+   </TabItem>
+   </Tabs>
 
-## Learning: Turn Insights into Knowledge
+3. **Learning: Turn Insights into Knowledge**
 
-To complete the feedback loop, document your successes as well as what didn't quite work as well. This can provide the foundation for a reusable playbook of successful tactics as well as Dos and Don'ts. Some items worth reflecting on include:
-    - Timing strategies
-    - Channel effectiveness
-    - Messaging approaches
-    - Format choices
+   To complete the feedback loop, document your successes as well as what didn't quite work as well. This provides the foundation for a reusable playbook of successful tactics.
 
-<CardGrid>
-  <Card title="Learning from Challenges" icon="warning">
-    1. Identify what didn't work
-    2. Analyze potential causes:
-       - Message clarity
-       - Channel selection
-       - Timing decisions
-       - Audience alignment
-    3. Document lessons learned
-    4. Develop improvement strategies
-  </Card>
+   <Tabs>
+   <TabItem label="Documentation Areas">
+   **Key Areas to Reflect On**
+   - Timing strategies and optimal scheduling
+   - Channel effectiveness for different audiences
+   - Messaging approaches that resonate
+   - Format choices and presentation styles
+   - Stakeholder engagement patterns
+   </TabItem>
+   <TabItem label="Learning Process">
+   **From Challenges to Improvements**
+   1. Identify what didn't work as expected
+   2. Analyze potential causes:
+      - Message clarity and relevance
+      - Channel selection appropriateness
+      - Timing decisions and context
+      - Audience alignment and targeting
+   3. Document lessons learned systematically
+   4. Develop concrete improvement strategies
+   </TabItem>
+   </Tabs>
 
-  <Card title="Knowledge Sharing" icon="comment">
-    - Share insights with colleagues
-    - Connect with the Global Internal Communications Team
-    - Exchange regional best practices
-    
-  </Card>
-</CardGrid>
+   <Aside type="tip" title="Knowledge Sharing">
+   Share insights with colleagues, connect with the Global Internal Communications Team, and exchange regional best practices to amplify learning across the organization.
+   </Aside>
 
-## Adaptation: Improve Based on What You Learn
+4. **Adaptation: Improve Based on What You Learn**
 
-Small changes can lead to significant improvements. Monitor and adjust:
-    - Email engagement → Try different subject lines/timing
-    - Meeting attendance → Modify format/schedule
-    - Content effectiveness → Refine messaging approach
+   Small changes can lead to significant improvements. The key is continuous monitoring and iterative adjustments rather than waiting for major overhauls.
 
-<CardGrid>
-  
-  <Card title="Continuous Improvement" icon="setting">
-    - Build checkpoints into communication plans
-    - Assess effectiveness regularly
-    - Make iterative improvements
-    - Don't wait for campaign end to adjust
-  </Card>
-  
-  <Card title="Experimentation Framework" icon="laptop">
-    1. Start small
-    2. Test new formats
-    3. Try different channels
-    4. Experiment with timing
-    5. Scale successful approaches
-  </Card>
-</CardGrid>
+   <Tabs>
+   <TabItem label="Quick Adjustments">
+   **Immediate Improvements**
+   - **Email engagement issues** → Try different subject lines or timing
+   - **Low meeting attendance** → Modify format, duration, or schedule
+   - **Content ineffectiveness** → Refine messaging approach or format
+   - **Poor feedback quality** → Adjust question framing or collection method
+   </TabItem>
+   <TabItem label="Experimentation Framework">
+   **Systematic Testing Approach**
+   1. **Start small** with low-risk communications
+   2. **Test new formats** (videos, infographics, interactive content)
+   3. **Try different channels** (email, Banyan, meetings, informal)
+   4. **Experiment with timing** (morning vs. afternoon, weekly vs. monthly)
+   5. **Scale successful approaches** to more important initiatives
+   </TabItem>
+   </Tabs>
 
-<div class="sl-markdown-content">
-  <Card title="Pro Tip" icon="rocket">
-    Begin with low-risk communications for experiments. Once you find what works, apply these proven approaches to more important initiatives.
-  </Card>
-</div>
-## Common MELA Mistakes to Avoid
+   <Aside type="note" title="Continuous Improvement Strategy">
+   Build checkpoints into communication plans, assess effectiveness regularly, make iterative improvements, and don't wait for campaign end to adjust your approach.
+   </Aside>
 
-<CardGrid>
-  <Card title="Over-measuring" icon="warning">
-    Don't track every possible metric. Focus on a few key indicators that matter most to your goals.
-  </Card>
-  
-  <Card title="Ignoring Qualitative Data" icon="warning">
-    Numbers tell only part of the story. Value conversations and qualitative information as much as numerical metrics.
-  </Card>
-  
-  <Card title="Delayed Adjustments" icon="warning">
-    Make continuous small improvements instead of waiting for formal evaluation periods.
-  </Card>
-  
-  <Card title="Working in Silos" icon="warning">
-    Share your insights and learn from others' experiences to improve collective effectiveness.
-  </Card>
-</CardGrid>
+</Steps>
+## Best Practices & Common Pitfalls
+
+<Aside type="tip" title="Pro Tip">
+Begin with low-risk communications for experiments. Once you find what works, apply these proven approaches to more important initiatives.
+</Aside>
+
+### What to Avoid
+
+<Tabs>
+<TabItem label="Measurement Mistakes">
+**Over-measuring Everything**
+- Don't track every possible metric
+- Focus on 3-5 key indicators that matter most to your goals
+- Quality of insights matters more than quantity of data
+
+**Ignoring Timing Context**
+- Consider external factors affecting engagement
+- Account for seasonal patterns and organizational cycles
+- Don't compare metrics across dramatically different periods
+</TabItem>
+<TabItem label="Evaluation Errors">
+**Ignoring Qualitative Data**
+- Numbers tell only part of the story
+- Value conversations and informal feedback as much as metrics
+- Look for patterns in anecdotal evidence
+
+**Delayed Response to Issues**
+- Make continuous small improvements
+- Don't wait for formal evaluation periods to act
+- Address obvious problems immediately
+</TabItem>
+<TabItem label="Learning & Adaptation Issues">
+**Working in Silos**
+- Share your insights with colleagues
+- Learn from others' experiences regularly
+- Participate in global communications best practice sharing
+
+**Fear of Experimentation**
+- Don't stick with approaches just because they're familiar
+- Test new methods systematically
+- Accept that some experiments won't work as expected
+</TabItem>
+</Tabs>
+
+---
+
+## Quick Reference: MELA Implementation Checklist
+
+<Steps>
+
+1. **Set Up Measurement** 
+   - [ ] Identify 3-5 key metrics aligned with communication goals
+   - [ ] Establish baseline measurements for comparison
+   - [ ] Set up tracking systems (ContactMonkey, Banyan analytics, etc.)
+
+2. **Plan Evaluation**
+   - [ ] Schedule monthly evaluation sessions
+   - [ ] Create feedback collection methods
+   - [ ] Identify qualitative indicators to monitor
+
+3. **Document Learning**
+   - [ ] Create a simple learning log or template
+   - [ ] Schedule quarterly knowledge sharing sessions
+   - [ ] Connect with Global Internal Communications Team
+
+4. **Enable Adaptation**
+   - [ ] Build flexibility into communication plans
+   - [ ] Establish protocols for making quick adjustments
+   - [ ] Plan low-risk experimentation opportunities
+
+</Steps>
