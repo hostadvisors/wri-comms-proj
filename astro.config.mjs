@@ -7,7 +7,7 @@ export default defineConfig({
     starlight({
       title: '',
       description:
-        'Documentation themed for the World Resources Institute using Astro Starlight.',
+        'Documentation for the World Resources Institute Internal Communications Team.',
 	  logo: {
 		light: './src/wri-theme/assets/logo-light.svg',
 		dark: './src/wri-theme/assets/logo-dark.svg',
