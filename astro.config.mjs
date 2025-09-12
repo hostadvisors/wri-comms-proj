@@ -25,7 +25,6 @@ export default defineConfig({
           label: 'About Internal Comms',
           items: [
             { label: 'Overview', slug: 'who-we-are/overview' },
-            { label: 'Roles and Responsibilities ', slug: 'who-we-are/structure' },
           ],
         },
         {
