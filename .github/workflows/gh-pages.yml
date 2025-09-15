@@ -3,6 +3,13 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  # Allow manual runs from the Actions UI. You can specify a branch via the `ref` input.
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Branch or tag to build and deploy (e.g. refs/heads/main or main)'
+        required: false
+        default: 'main'
 
 jobs:
   build-and-deploy:
@@ -15,6 +22,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Support manual runs: use the provided input ref when workflow_dispatch is used,
+          # otherwise fall back to the default github.ref from the push event.
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.ref || github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -32,5 +43,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          # Optional: keep history on gh-pages branch
           keep_files: false
