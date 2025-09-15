@@ -8,15 +8,6 @@ A comprehensive internal communications playbook for the World Resources Institu
 
 This documentation site serves as the central resource for WRI's internal communications team, providing guidelines, templates, and best practices for employee engagement and organizational communication.
 
-### Key Features:
-- **🎨 Custom WRI Branding**: Complete theme implementation with official WRI colors and typography
-- **🔐 Password Protection**: Secure access for internal team members
-- **� Full-Text Search**: Pagefind-powered search across all documentation content
-- **�📱 Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **🌙 Dark Mode Support**: Full light/dark theme compatibility
-- **♿ WCAG Compliant**: Meets accessibility standards with proper contrast ratios
-- **⚡ Fast Performance**: Built on Astro for optimal loading speeds
-
 ## 🏗️ Architecture
 
 ### Framework Stack:
@@ -25,39 +16,24 @@ This documentation site serves as the central resource for WRI's internal commun
 - **[Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)**: Official WRI typography
 - **Custom CSS Architecture**: Modular theme system for maintainability
 
-### Project Structure:
+### Project structure
+
 ```
 .
-├── public/
+├── public/                      # static assets copied to site root
 │   └── favicon.svg
 ├── src/
-│   ├── assets/
-│   │   └── houston.webp
-│   ├── content/
-│   │   └── docs/                    # Documentation content
-│   │       ├── index.mdx           # Homepage
-│   │       ├── foundation/         # Who we are, mission, values
-│   │       ├── strategy/           # Planning and frameworks  
-│   │       ├── voice-tone/         # Brand voice guidelines
-│   │       ├── employee-journey/   # Employee lifecycle comms
-│   │       ├── channels/           # Communication channels
-│   │       ├── templates/          # Reusable templates
-│   │       └── measurement/        # Analytics and feedback
-│   ├── pages/
-│   │   ├── login.astro            # Authentication page
-│   │   └── logout.astro           # Logout handler
-│   ├── wri-theme/                 # Custom WRI theme
-│   │   ├── wri-theme.css          # Main CSS entry point
-│   │   ├── theme.css              # Color tokens and variables
-│   │   ├── components.css         # UI component styles
-│   │   ├── overrides.css          # Starlight customizations
-│   │   ├── assets/                # WRI logos and graphics
-│   │   └── overrides/
-│   │       └── Header.astro       # Custom header with logout
-│   ├── middleware.ts              # Authentication middleware
-│   └── content.config.ts          # Content validation
-├── astro.config.mjs               # Astro configuration
-├── netlify.toml                   # Netlify deployment config
+│   ├── assets/                  # images and media used in content
+│   ├── content/                 # site content (markdown / mdx)
+│   │   └── docs/
+│   │       └── ...
+│   ├── content.config.ts        # Astro content collections
+│   └── wri-theme/               # styling and theme CSS
+│       ├── wri-theme.css
+│       ├── theme.css
+│       ├── components.css
+│       └── overrides.css
+├── astro.config.mjs             # Astro configuration (base, site, integrations)
 ├── package.json
 └── tsconfig.json
 ```
@@ -79,12 +55,6 @@ npm install
 
 # Start development server
 npm run dev
-```
-
-### Environment Setup:
-Create a `.env` file with your authentication password:
-```bash
-PLAYBOOK_PASSWORD=your-secure-password
 ```
 
 ## 🧞 Available Commands
@@ -115,45 +85,47 @@ The theme is organized into modular layers for maintainability:
 
 For detailed theme documentation, see [`src/wri-theme/README.md`](src/wri-theme/README.md).
 
-## 🔐 Authentication System
-
-The site features middleware-based password protection with environment-aware behavior:
-
-### Development Mode:
-- **No Authentication Required**: All pages accessible without login for easier development
-- **DEV Indicator**: Shows "DEV" badge in header to indicate development mode
-- **Login/Logout Pages**: Still functional for testing authentication flow
-
-### Production Mode:
-- **Password Protection**: Requires authentication for all protected pages
-- **Login Page**: Simple password authentication at `/login`
-- **Session Management**: Cookie-based sessions for seamless navigation
-- **Auto-redirect**: Unauthorized users redirected to login
-- **Logout Functionality**: Accessible via header button (authenticated users only)
 
 ## 🚀 Deployment
 
-### Netlify Configuration:
-The site is configured for deployment on Netlify at `wri.brandkit.host`:
+### GitHub Pages
 
-```toml
-# netlify.toml
-[build]
-  command = "npm run build"
-  publish = "dist"
+This project is set up to deploy to GitHub Pages using the official GitHub Actions Pages flow. The workflow at `.github/workflows/pages.yml` builds the site and deploys the `dist/` output using GitHub's Pages actions.
 
-[build.environment]
-  NODE_VERSION = "18"
+Steps to deploy:
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+1. Ensure the repository is hosted on GitHub and that pushes to `main` trigger Actions (the workflow runs on `main`).
+2. The workflow `.github/workflows/pages.yml` runs `npm ci` and `npm run build`, uploads the `dist/` artifact, and deploys it with the official Pages actions.
+3. Verify `base` in `astro.config.mjs` is correct:
+   - For a site served at the root (for example a custom domain), use `base: '/'`.
+   - For a GitHub project page (https://<username>.github.io/<repo>/) set `base: '/<repo>/'`.
+4. For the custom domain `https://wri.brandkit.host`, a `public/CNAME` file is included; GitHub Pages will pick this up when the site is deployed.
+
+Manual build (optional):
+
+```bash
+# build locally
+npm ci
+npm run build
+
+# To publish the built files manually to a gh-pages branch (alternative):
+# create a commit of the dist/ contents and push to the gh-pages branch
+git worktree add /tmp/dist dist
+cd /tmp/dist
+git add --all
+git commit -m "Publish site"
+git push origin HEAD:gh-pages --force
 ```
 
-### Environment Variables:
-Set the following in your Netlify dashboard:
-- `PLAYBOOK_PASSWORD`: Password for site access
+Notes:
+- GitHub Pages does not support Netlify-style custom response headers; use a CDN (Cloudflare) or proxy if you need to add headers.
+- The workflow uses Node 18 to match the project's runtime.
+
+Custom domain notes (for `https://wri.brandkit.host`):
+
+- I added `public/CNAME` with `wri.brandkit.host`. When the `gh-pages` branch is published, GitHub Pages will use this CNAME and provision HTTPS automatically (may take a few minutes).
+- Ensure your DNS for `wri.brandkit.host` points to GitHub Pages. For subdomains use a `CNAME` record to `username.github.io` or the repo's Pages target; for apex domains, follow GitHub's IP-based `A` records instructions.
+
 
 ## 📚 Content Management
 
@@ -199,47 +171,3 @@ For technical issues or content questions:
 This project is proprietary to the World Resources Institute and is intended for internal use only.
 
 ---
-
-**Built with ❤️ for the WRI Communications Team**
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
-
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
-
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
-
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
