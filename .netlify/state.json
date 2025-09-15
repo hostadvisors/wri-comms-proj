@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Brockton",
+			"country": {
+				"code": "US",
+				"name": "United States"
+			},
+			"subdivision": {
+				"code": "MA",
+				"name": "Massachusetts"
+			},
+			"timezone": "America/New_York",
+			"latitude": 42.0774,
+			"longitude": -71.0446,
+			"postalCode": "02301"
+		},
+		"timestamp": 1755537784985
+	}
+}
