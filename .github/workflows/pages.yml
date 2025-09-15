@@ -1,11 +1,11 @@
-name: Build and deploy to GitHub Pages (official)
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -27,19 +27,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload artifact for GitHub Pages
-        # use v2 which depends on the newer upload-artifact action (avoids deprecated v3)
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          # Optional: keep history on gh-pages branch
+          keep_files: false
