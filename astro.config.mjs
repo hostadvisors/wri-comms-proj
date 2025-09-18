@@ -9,7 +9,7 @@ export default defineConfig({
   base: '/',
   // Set the published site URL to your custom domain so generated absolute URLs
   // (sitemaps, RSS, etc.) use the proper hostname.
-  site: 'https://wri.brandkit.host',
+  site: 'https://hostadvisors.github.io/wri-comms-proj/',
   integrations: [
     starlight({
       title: '',
