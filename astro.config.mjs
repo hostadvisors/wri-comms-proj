@@ -6,10 +6,10 @@ export default defineConfig({
   // For a custom domain (root site) set base to '/' so assets resolve at the
   // site root. If you instead host as a GitHub project page (https://<user>.github.io/<repo>/)
   // change base to '/<repo>/' accordingly.
-  base: '/wri-comms-proj/',
+  base: '/',
   // Set the published site URL to your custom domain so generated absolute URLs
   // (sitemaps, RSS, etc.) use the proper hostname.
-  site: 'https://hostadvisors.github.io/wri-comms-proj/',
+  site: 'https://wri.brandkit.host',
   integrations: [
     starlight({
       title: '',
