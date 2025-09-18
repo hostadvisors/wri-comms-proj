@@ -32,6 +32,7 @@ export default defineConfig({
           label: 'About Internal Comms',
           items: [
             { label: 'Overview', slug: 'who-we-are/overview' },
+			{ label: 'WRI is great', slug: 'who-we-are/wri-team-is-great' },
           ],
         },
         {
