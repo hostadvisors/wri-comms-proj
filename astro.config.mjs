@@ -32,23 +32,22 @@ export default defineConfig({
           label: 'About Internal Comms',
           items: [
             { label: 'Overview', slug: 'who-we-are/overview' },
-			{ label: 'WRI is great', slug: 'who-we-are/wri-team-is-great' },
           ],
         },
         {
-          label: 'Comms Guidance',
+          label: 'Comms Guidance & Strategy',
           items: [
             { label: 'Creating a Comms Plan', slug: 'strategy/framework' },
             { label: 'Developing Successful Messaging', slug: 'strategy/messaging' },
+            { label: 'Tone and Voice Guidelines', slug: 'strategy/tone-voice' },
             { label: 'Cascading Framework', slug: 'strategy/cascading' },
           ],
         },
         {
-          label: 'Implementing Comms',
+          label: 'Channels & Methods',
           items: [
-            { label: 'Channels & Methods', slug: 'implement/channels' },
-            { label: 'Tone and Voice Guidelines', slug: 'implement/tone-voice' },
-            { label: 'Templates', slug: 'implement/templates' },
+            { label: 'Channels', slug: 'channels/channels' },
+            { label: 'Banyan', slug: 'channels/banyan' },
           ],
         },
         {
@@ -59,10 +58,11 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Related Resources',
+          label: 'Resources',
           items: [
-            { label: 'Toolkits', slug: 'related-resources/toolkits' },
-            { label: 'Additional Resources', slug: 'related-resources/resources' },
+            { label: 'Templates', slug: 'resources/templates' },
+            { label: 'Toolkits', slug: 'resources/toolkits' },
+            { label: 'Additional Resources', slug: 'resources/resources' },
           ],
         },
       ],
